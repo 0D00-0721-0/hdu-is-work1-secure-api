@@ -1,19 +1,19 @@
-# 实际验证记录
+# Recorded Verification Results
 
-日期：2026-10-19（Asia/Shanghai）。
+Experiment date: 19 October 2026 (Asia/Shanghai).
 
-| 项目 | 本次实际结果 | 原始证据 |
+| Item | Recorded result | Original evidence |
 | --- | --- | --- |
-| API 测试 | 29 passed | `pytest.txt`、`pytest.xml` |
-| 真实 HTTP curl 检查 | 全部通过 | `curl-tests.txt` |
-| SAST | Bandit 无未处理告警；一处 Bearer 常量误报采用行级 B105 注释 | `bandit.json`、`bandit-console.txt` |
-| SCA | 10 个运行依赖，无已知漏洞 | `pip-audit.json`、`pip-audit-console.txt` |
-| Docker | 引擎 29.8.2，Docker Desktop 4.95.0，Compose 5.6.0 | 构建与容器日志 |
-| 脆弱环境 | Apache 2.4.49，首页 200，目录穿越 200，读取容器 `/etc/passwd` | `cve-vulnerable-*`、`cve-vulnerable/` |
-| 配置缓解 | Apache 仍为 2.4.49；相同路径 403，正常首页 200 | `cve-mitigation-*`、`cve-mitigation/` |
-| 升级环境 | 2.4.69 及 Alpine 变体元数据可访问，部分镜像层下载停滞；未完成动态验证 | `docker-fixed-build.txt`、`docker-upgrade-download.txt` |
-| GitHub Actions | tests、sast、sca 全部成功，运行 39196313211 | `ci-current/`、`docs/SUBMISSION.md` |
+| API tests | 29 passed | `pytest.txt`, `pytest.xml` |
+| Live HTTP curl checks | All passed | `curl-tests.txt` |
+| SAST | No unhandled Bandit findings; one Bearer-label false positive has a line-specific B105 annotation | `bandit.json`, `bandit-console.txt` |
+| SCA | 10 runtime dependencies; no known vulnerabilities | `pip-audit.json`, `pip-audit-console.txt` |
+| Docker | Engine 29.8.2, Desktop 4.95.0, Compose 5.6.0 | Build and container logs |
+| Vulnerable environment | Apache 2.4.49; homepage 200; traversal 200; container `/etc/passwd` disclosed | `cve-vulnerable-*`, `cve-vulnerable/` |
+| Configuration mitigation | Binary still 2.4.49; same traversal path 403; homepage 200 | `cve-mitigation-*`, `cve-mitigation/` |
+| Upgrade proposal | Metadata for 2.4.69 and the Alpine variant was accessible, but some layer downloads stalled; no dynamic upgrade verification | `docker-fixed-build.txt`, `docker-upgrade-download.txt` |
+| GitHub Actions | tests, SAST, and SCA succeeded in run 39196313211; final implementation/submission run 39196644394 also succeeded | `ci-current/`, `docs/SUBMISSION.md` |
 
-首次网络失败说明：Docker 镜像层下载域名返回了不可达的 IPv6，出现 `no route to host`。临时使用 IPv4 可解析 DNS 后镜像下载成功；随后 Wi-Fi DNS 已恢复原来的自动获取。用户同时切换了网络，不能据此断言成功完全由单一网络改动造成。没有修改 Docker 代理，也没有把失败声称为成功复现。
+Initial network failure: Docker attempted to download image layers through a hostname resolving to unreachable IPv6, producing `no route to host`. A later vulnerable-image download succeeded after a temporary DNS adjustment and a user network switch. These overlapping changes do not prove a single cause of recovery. Wi-Fi DNS was restored to its original automatic configuration, and Docker proxy settings were not modified.
 
-上述 Bandit 和 SCA 的“无问题”限定于所述扫描范围、规则/漏洞库及记录时间，不代表不存在所有安全风险。
+Clean Bandit/SCA results are limited to the stated scopes, rules, vulnerability data, and recorded time. They do not establish the absence of all security risks. The documentation and evidence-viewer headings have been translated into English; original execution outputs remain unchanged.

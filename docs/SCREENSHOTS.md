@@ -1,16 +1,18 @@
-# 截图清单与证据位置
+# Screenshot Checklist and Evidence Mapping
 
-所有截图均应对应本项目的实际运行。原始日志是主证据，不使用上游 README 中的示例截图冒充本次操作。
+Every screenshot must correspond to the project's actual evidence. Original logs are the primary records. Upstream README images are not used as substitutes for this experiment's results.
 
-| 编号 | 应显示的内容 | 对应原始证据 | 状态 |
+| ID | Content | Original evidence | Supplied image |
 | --- | --- | --- | --- |
-| S01 | curl 真实 API 检查：未登录 401，登录 200，写入 201，SQLi/JWT 拒绝 | `evidence/curl-tests.txt` | 已提供 S01-S04-api-evidence.png |
-| S02 | pytest 29 passed | `evidence/pytest.txt`、`pytest.xml` | 已提供 S01-S04-api-evidence.png |
-| S03 | Bandit 无未处理告警，包含扫描范围 | `evidence/bandit.json` | 已提供 S01-S04-api-evidence.png |
-| S04 | pip-audit 无已知漏洞，10 个运行依赖 | `evidence/pip-audit.json`、`pip-audit-console.txt` | 已提供 S01-S04-api-evidence.png |
-| S05 | GitHub Actions tests/sast/sca 三项成功及 run URL | `docs/SUBMISSION.md`、`evidence/ci-current/` | 已提供 S05-actions-success.png，真实 Actions 页面 |
-| S06 | 漏洞版本 2.4.49、同一请求读取容器账户文件 | `evidence/cve-vulnerable-version.txt`、`cve-vulnerable/` | 已提供 S06-S07-cve-evidence.png |
-| S07 | 配置缓解后同一攻击 403、首页 200；软件仍为 2.4.49 | `evidence/cve-mitigation-version.txt`、`cve-mitigation/` | 已提供 S06-S07-cve-evidence.png；新版镜像升级未验证 |
-| S08 | 修复差异、恢复默认权限、不启用 CGI | `fixes/httpd.patch`、`fixes/README.md` | 已提供 |
+| S01 | Live curl checks: unauthenticated 401, login 200, creation 201, SQLi/JWT rejection | `evidence/curl-tests.txt` | `S01-S04-api-evidence.png` |
+| S02 | pytest: 29 passed | `evidence/pytest.txt`, `evidence/pytest.xml` | `S01-S04-api-evidence.png` |
+| S03 | Bandit: no unhandled findings, with scope and metrics | `evidence/bandit.json` | `S01-S04-api-evidence.png` |
+| S04 | pip-audit: 10 runtime dependencies, no known vulnerabilities | `evidence/pip-audit.json` | `S01-S04-api-evidence.png` |
+| S05 | Successful tests/SAST/SCA jobs and the workflow run | `docs/SUBMISSION.md`, `evidence/ci-current/` | `S05-actions-success.png`: native GitHub Actions page |
+| S06 | Apache 2.4.49 and the traversal response disclosing a container file | `evidence/cve-vulnerable-version.txt`, `evidence/cve-vulnerable/` | `S06-S07-cve-evidence.png` |
+| S07 | Configuration mitigation: attack 403 and homepage 200; binary still 2.4.49 | `evidence/cve-mitigation-version.txt`, `evidence/cve-mitigation/` | `S06-S07-cve-evidence.png`; no upgraded-version result is claimed |
+| S08 | Configuration/upgrade files and the upgrade diff | `fixes/httpd.patch`, `fixes/README.md` | Supplied as reviewable files |
 
-截图时请隐藏密码、有效 JWT、任何密钥；保留命令、状态码、版本、运行链接和时间。若通过本地证据页面截图，应标注“原始日志的浏览器呈现”，不要标作终端截图或 Actions 页面截图。
+The S01-S04 and S06-S07 images are **browser presentations of saved raw logs**, with English headings and source hashes. They are not native terminal screenshots or native Actions report pages. Recreating those evidence pages in English does not rerun or alter the original tests. S05 is a genuine GitHub Actions page capture.
+
+Do not expose passwords, valid JWTs, or signing keys in additional screenshots. Keep relevant commands, response codes, versions, run links, and timestamps visible.

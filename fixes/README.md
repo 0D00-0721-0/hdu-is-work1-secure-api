@@ -1,21 +1,32 @@
-# CVE-2021-41773 修复附件
+# CVE-2021-41773 Protection Measures
 
-`lab/vulnerable/Dockerfile` 保留 Vulhub 的上游脆弱设置；本目录是修复后的实际构建文件。
+The upstream vulnerable settings are retained in `lab/vulnerable/Dockerfile`. This directory contains a **verified configuration mitigation** and a separate **upgrade proposal that has not been dynamically verified**.
 
-| 文件 | 作用 |
+| File | Purpose |
 | --- | --- |
-| `Dockerfile` | 将 Apache 2.4.49 升级到 2.4.69，并保留官方默认权限和模块配置 |
-| `compose.yml` | 本地回环端口 18080、amd64 兼容、资源限制和 no-new-privileges |
-| `httpd.patch` | 脆弱 Dockerfile 到修复 Dockerfile 的统一差异 |
-| `../scripts/verify_cve.sh` | 修复前后使用相同请求进行自动验证 |
-| `Dockerfile.mitigation` | 在缓存的 2.4.49 基础镜像上恢复默认根目录拒绝，保持 autoindex Alias，不开启 CGI |
-| `compose.mitigation.yml` | 独立配置缓解对照环境，回环端口 18081 |
+| `Dockerfile.mitigation` | Uses the cached 2.4.49 base; keeps the autoindex Alias, retains default root-directory denial, and does not enable CGI |
+| `compose.mitigation.yml` | Independent mitigation environment on loopback port 18081 |
+| `Dockerfile` | Proposed upgrade to official Apache 2.4.69 with its default access/module settings |
+| `compose.yml` | Upgrade environment on loopback port 18080, with amd64 compatibility and resource restrictions |
+| `httpd.patch` | Unified diff from the vulnerable Dockerfile to the upgrade proposal |
+| `../scripts/verify_cve.sh` | Replays the same attack path and checks normal homepage functionality |
 
-Vulhub 为方便演示启用 CGI、自动索引 Alias，并把 `<Directory />` 设为 `Require all granted`。修复删除这些有意放宽的设置，恢复官方镜像对文件系统根目录默认拒绝，仅开放正常网页目录。升级补上路径规范化缺陷；权限最小化进一步限制意外的目录映射。
+## Verified configuration mitigation
 
-不采用 2.4.50 作为最终修复，因为该版本对 CVE-2021-41773 的修复不完整，相关绕过另编号为 CVE-2021-42013。2.4.51 是后者的历史修复版本；本项目实际选用 2.4.69。该验证仅证明记录的攻击请求被本配置阻断，不等同于整个软件不存在其他漏洞。
+Vulhub enables CGI and an autoindex Alias and changes `<Directory />` to `Require all granted`. The mitigation keeps the Alias for comparison, but leaves the default `Require all denied` policy for the filesystem root and does not enable CGI.
 
-运行与关闭：
+```bash
+docker compose -p work1-mitigation -f fixes/compose.mitigation.yml up --build -d
+BASE_URL=http://127.0.0.1:18081 \
+  bash scripts/verify_cve.sh fixed evidence/cve-mitigation
+docker compose -p work1-mitigation -f fixes/compose.mitigation.yml down
+```
+
+Observed result: the same attack path changed from HTTP 200 to HTTP 403, while the homepage still returned HTTP 200. The old 2.4.49 parser defect remains in the binary. Access restrictions block the demonstrated attack, but a later configuration change could re-expose it; upgrading is still recommended.
+
+## Upgrade proposal and verification limit
+
+Apache 2.4.50 is not the final upgrade target because its fix for CVE-2021-41773 was incomplete; the related bypass is CVE-2021-42013, fixed in 2.4.51. This proposal selects the inspected official 2.4.69 image. It also removes the deliberately weakened Vulhub settings and retains the official defaults for root-directory denial, CGI, and Alias exposure.
 
 ```bash
 docker compose -p work1-fixed -f fixes/compose.yml up --build -d
@@ -23,6 +34,6 @@ bash scripts/verify_cve.sh fixed
 docker compose -p work1-fixed -f fixes/compose.yml down
 ```
 
-保留的证据包括构建日志、`httpd -v` 输出、同一攻击的原始响应头/正文/状态码、正常首页响应。见 `evidence/VERIFICATION.md`。
+Some image layers failed to finish downloading, including attempts with an Alpine variant. The commands above are a future verification procedure, not evidence that an upgraded container was successfully run.
 
-配置缓解已实际验证：`BASE_URL=http://127.0.0.1:18081 bash scripts/verify_cve.sh fixed evidence/cve-mitigation`，原攻击从 200 变为 403，正常首页仍为 200。配置缓解不等于从旧版本二进制移除了缺陷，仍应升级。
+Evidence for the completed mitigation includes build logs, `httpd -v`, raw attack headers/body/status, and the normal homepage response. See `evidence/VERIFICATION.md`. The results establish that the recorded attack is blocked by the tested configuration, not that the software is free of all vulnerabilities.
