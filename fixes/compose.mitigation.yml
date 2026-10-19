@@ -1,0 +1,12 @@
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile.mitigation
+    platform: linux/amd64
+    ports:
+      - "127.0.0.1:18081:80"
+    mem_limit: 256m
+    pids_limit: 100
+    security_opt:
+      - no-new-privileges:true

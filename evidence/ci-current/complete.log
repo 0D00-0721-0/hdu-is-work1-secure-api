@@ -1,0 +1,1008 @@
+sast	Set up job	﻿2026-10-19T03:47:02.2802531Z Current runner version: '2.337.0'
+sast	Set up job	2026-10-19T03:47:02.2822443Z ##[group]Runner Image Provisioner
+sast	Set up job	2026-10-19T03:47:02.2823150Z Hosted Compute Agent
+sast	Set up job	2026-10-19T03:47:02.2823515Z Version: 20261012.601
+sast	Set up job	2026-10-19T03:47:02.2823913Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+sast	Set up job	2026-10-19T03:47:02.2824400Z Build Date: 2026-10-12T17:48:21Z
+sast	Set up job	2026-10-19T03:47:02.2824818Z Worker ID: {c692603c-11f9-4f64-8dd4-56651d175e19}
+sast	Set up job	2026-10-19T03:47:02.2825411Z Region: centralus
+sast	Set up job	2026-10-19T03:47:02.2825758Z Cloud: Azure
+sast	Set up job	2026-10-19T03:47:02.2826090Z ##[endgroup]
+sast	Set up job	2026-10-19T03:47:02.2826898Z ##[group]Operating System
+sast	Set up job	2026-10-19T03:47:02.2827260Z Ubuntu
+sast	Set up job	2026-10-19T03:47:02.2827659Z 24.04.5
+sast	Set up job	2026-10-19T03:47:02.2827976Z LTS
+sast	Set up job	2026-10-19T03:47:02.2828288Z ##[endgroup]
+sast	Set up job	2026-10-19T03:47:02.2828652Z ##[group]Runner Image
+sast	Set up job	2026-10-19T03:47:02.2829004Z Image: ubuntu-24.04
+sast	Set up job	2026-10-19T03:47:02.2829608Z Version: 20261012.334.1
+sast	Set up job	2026-10-19T03:47:02.2830261Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+sast	Set up job	2026-10-19T03:47:02.2831305Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+sast	Set up job	2026-10-19T03:47:02.2831893Z ##[endgroup]
+sast	Set up job	2026-10-19T03:47:02.2832579Z ##[group]GITHUB_TOKEN Permissions
+sast	Set up job	2026-10-19T03:47:02.2833860Z Contents: read
+sast	Set up job	2026-10-19T03:47:02.2834193Z Metadata: read
+sast	Set up job	2026-10-19T03:47:02.2834581Z ##[endgroup]
+sast	Set up job	2026-10-19T03:47:02.2836051Z Secret source: Actions
+sast	Set up job	2026-10-19T03:47:02.2836650Z Cache mode: write
+sast	Set up job	2026-10-19T03:47:02.2837102Z Prepare workflow directory
+sast	Set up job	2026-10-19T03:47:02.3192701Z Prepare all required actions
+sast	Set up job	2026-10-19T03:47:02.3237047Z Getting action download info
+sast	Set up job	2026-10-19T03:47:02.5587437Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+sast	Set up job	2026-10-19T03:47:02.8503500Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+sast	Set up job	2026-10-19T03:47:03.4390572Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+sast	Set up job	2026-10-19T03:47:04.3020197Z Complete job name: sast
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T03:47:04.3506222Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3506651Z with:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3506825Z   repository: 0D00-0721-0/hdu-is-work1-secure-api
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3508374Z   token: ***
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3508517Z   ssh-strict: true
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3508664Z   ssh-user: git
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3508817Z   persist-credentials: true
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3508980Z   clean: true
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3509132Z   sparse-checkout-cone-mode: true
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3509306Z   fetch-depth: 1
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3509450Z   fetch-tags: false
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3509596Z   show-progress: true
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3509747Z   lfs: false
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3509902Z   submodules: false
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3510050Z   set-safe-directory: true
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3510224Z   allow-unsafe-pr-checkout: false
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.3510488Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4218290Z Syncing repository: 0D00-0721-0/hdu-is-work1-secure-api
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4219409Z ##[group]Getting Git version info
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4219921Z Working directory is '/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api'
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4220412Z [command]/usr/bin/git version
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4267537Z git version 2.55.0
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4282228Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4293108Z Temporarily overriding HOME='/home/runner/work/_temp/e403766a-1088-41f8-8808-24c8afb35169' before making global git config changes
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4293684Z Adding repository directory to the temporary git global config as a safe directory
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4298666Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4344403Z Deleting the contents of '/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api'
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4346339Z ##[group]Determining repository object format
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4347680Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4348081Z ##[group]Initializing the repository
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4352156Z [command]/usr/bin/git init /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4441212Z hint: Using 'master' as the name for the initial branch. This default branch name
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4443698Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4444385Z hint: to use in all of your new repositories, which will suppress this warning,
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4444885Z hint: call:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4445197Z hint:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4445835Z hint: 	git config --global init.defaultBranch <name>
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4446800Z hint:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4447265Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4447770Z hint: 'development'. The just-created branch can be renamed via this command:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4448203Z hint:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4448434Z hint: 	git branch -m <name>
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4448682Z hint:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4449011Z hint: Disable this message with "git config set advice.defaultBranchName false"
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4449660Z Initialized empty Git repository in /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4453130Z [command]/usr/bin/git remote add origin https://github.com/0D00-0721-0/hdu-is-work1-secure-api
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4550902Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4551393Z ##[group]Disabling automatic garbage collection
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4554228Z [command]/usr/bin/git config --local gc.auto 0
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4585480Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4585873Z ##[group]Setting up auth
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4589913Z Removing SSH command configuration
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4591032Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4621047Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4887574Z Removing HTTP extra header
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4889572Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4919000Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5087968Z Removing includeIf entries pointing to credentials config files
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5091588Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5120571Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5305186Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5339523Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path /home/runner/work/_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5368950Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5399199Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5427706Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5453817Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5454152Z ##[group]Fetching the repository
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5458075Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f:refs/remotes/origin/main
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8777397Z From https://github.com/0D00-0721-0/hdu-is-work1-secure-api
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8778126Z  * [new ref]         d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f -> origin/main
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8785095Z [command]/usr/bin/git branch --list --remote origin/main
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8811372Z   origin/main
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8816834Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8838146Z d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8841064Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8841466Z ##[group]Determining the checkout info
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8841911Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8844456Z [command]/usr/bin/git sparse-checkout disable
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8886052Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8913128Z ##[group]Checking out the ref
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8916158Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8982803Z Switched to a new branch 'main'
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8986907Z branch 'main' set up to track 'origin/main'.
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8990946Z ##[endgroup]
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9024846Z [command]/usr/bin/git log -1 --format=%H
+sast	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9047895Z d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-19T03:47:04.9231035Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9231304Z with:
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9231450Z   python-version: 3.12
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9231601Z   cache: pip
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9231761Z   cache-dependency-path: requirements-dev.txt
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9231954Z   check-latest: false
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9233351Z   token: ***
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9285979Z   update-environment: true
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9286266Z   allow-prereleases: false
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9286559Z   freethreaded: false
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:04.9286822Z ##[endgroup]
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.0031583Z ##[group]Installed versions
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.0084587Z Successfully set up CPython (3.12.15)
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.0084983Z ##[endgroup]
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.0277747Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2788749Z /home/runner/.cache/pip
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.4390879Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.1217255Z Received 8356677 of 8356677 (100.0%), 14.5 MBs/sec
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.1217784Z Cache Size: ~8 MB (8356677 B)
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.1272350Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c734f0b3-3c59-42ef-97ab-ab1f7cc7bbc7/cache.tzst -P -C /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api --use-compress-program unzstd
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.1553236Z Cache restored successfully
+sast	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.1560365Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f
+sast	Install verified, pinned dependencies	﻿2026-10-19T03:47:06.1681471Z ##[group]Run python -m pip install --require-hashes -r requirements-dev.txt
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1681863Z ^[[36;1mpython -m pip install --require-hashes -r requirements-dev.txt^[[0m
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1889584Z shell: /usr/bin/bash -e {0}
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1889792Z env:
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1889987Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1890249Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1890496Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1890716Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1890940Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1891378Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.1891608Z ##[endgroup]
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5633920Z Collecting bandit==1.9.4 (from -r requirements-dev.txt (line 3))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5642071Z   Using cached bandit-1.9.4-py3-none-any.whl (134 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5814100Z Collecting bcrypt==5.0.0 (from -r requirements-dev.txt (line 7))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5821666Z   Using cached bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5853052Z Collecting blinker==1.9.0 (from -r requirements-dev.txt (line 72))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5860420Z   Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5889889Z Collecting boolean-py==5.0 (from -r requirements-dev.txt (line 78))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5897104Z   Using cached boolean_py-5.0-py3-none-any.whl (26 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5933989Z Collecting cachecontrol==0.14.4 (from -r requirements-dev.txt (line 82))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5941317Z   Using cached cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.5995437Z Collecting certifi==2026.10.18 (from -r requirements-dev.txt (line 86))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6002914Z   Using cached certifi-2026.10.18-py3-none-any.whl (134 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6710379Z Collecting charset-normalizer==3.5.2 (from -r requirements-dev.txt (line 90))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6719831Z   Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6792706Z Collecting click==8.5.0 (from -r requirements-dev.txt (line 264))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6800062Z   Using cached click-8.5.0-py3-none-any.whl (125 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6885659Z Collecting cyclonedx-python-lib==11.12.0 (from -r requirements-dev.txt (line 270))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6894513Z   Using cached cyclonedx_python_lib-11.12.0-py3-none-any.whl (529 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6930648Z Collecting defusedxml==0.7.1 (from -r requirements-dev.txt (line 274))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.6938235Z   Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7015115Z Collecting filelock==4.2.4 (from -r requirements-dev.txt (line 278))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7022841Z   Using cached filelock-4.2.4-py3-none-any.whl (162 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7064144Z Collecting flask==3.1.3 (from -r requirements-dev.txt (line 282))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7072303Z   Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7109672Z Collecting idna==3.20 (from -r requirements-dev.txt (line 286))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7116940Z   Using cached idna-3.20-py3-none-any.whl (69 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7143468Z Collecting iniconfig==2.3.1 (from -r requirements-dev.txt (line 290))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7150802Z   Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7177527Z Collecting itsdangerous==2.2.0 (from -r requirements-dev.txt (line 294))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7184519Z   Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7221099Z Collecting jinja2==3.1.6 (from -r requirements-dev.txt (line 300))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7228319Z   Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7267546Z Collecting license-expression==30.4.4 (from -r requirements-dev.txt (line 306))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7274424Z   Using cached license_expression-30.4.4-py3-none-any.whl (120 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7320170Z Collecting markdown-it-py==4.2.0 (from -r requirements-dev.txt (line 310))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7327348Z   Using cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7574003Z Collecting markupsafe==3.0.4 (from -r requirements-dev.txt (line 314))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7584058Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7605019Z Collecting mdurl==0.1.2 (from -r requirements-dev.txt (line 471))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7611943Z   Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7961644Z Collecting msgpack==1.2.3 (from -r requirements-dev.txt (line 475))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.7969821Z   Using cached msgpack-1.2.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (472 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8022171Z Collecting packageurl-python==0.17.6 (from -r requirements-dev.txt (line 568))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8032286Z   Using cached packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8076269Z Collecting packaging==26.3 (from -r requirements-dev.txt (line 572))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8083934Z   Using cached packaging-26.3-py3-none-any.whl (129 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8096818Z Requirement already satisfied: pip==26.2.1 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from -r requirements-dev.txt (line 579)) (26.2.1)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8124487Z Collecting pip-api==0.0.35 (from -r requirements-dev.txt (line 583))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8132275Z   Using cached pip_api-0.0.35-py3-none-any.whl (123 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8193071Z Collecting pip-audit==2.10.1 (from -r requirements-dev.txt (line 587))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8200298Z   Using cached pip_audit-2.10.1-py3-none-any.whl (62 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8235827Z Collecting pip-requirements-parser==32.0.1 (from -r requirements-dev.txt (line 591))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8242794Z   Using cached pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8303737Z Collecting platformdirs==4.13.5 (from -r requirements-dev.txt (line 595))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8310958Z   Using cached platformdirs-4.13.5-py3-none-any.whl (32 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8340468Z Collecting pluggy==1.7.0 (from -r requirements-dev.txt (line 599))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8347657Z   Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8396134Z Collecting py-serializable==2.1.0 (from -r requirements-dev.txt (line 603))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8403894Z   Using cached py_serializable-2.1.0-py3-none-any.whl (23 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8460632Z Collecting pygments==2.21.0 (from -r requirements-dev.txt (line 607))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8468578Z   Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8533241Z Collecting pyjwt==2.15.1 (from -r requirements-dev.txt (line 613))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8541581Z   Using cached pyjwt-2.15.1-py3-none-any.whl (33 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8614976Z Collecting pyparsing==3.3.3 (from -r requirements-dev.txt (line 617))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8622532Z   Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8721440Z Collecting pytest==9.1.1 (from -r requirements-dev.txt (line 621))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8729345Z   Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8884053Z Collecting pyyaml==6.0.3 (from -r requirements-dev.txt (line 625))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8891548Z   Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8963837Z Collecting requests==2.34.2 (from -r requirements-dev.txt (line 700))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.8971818Z   Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9076810Z Collecting rich==15.0.0 (from -r requirements-dev.txt (line 706))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9084425Z   Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9126869Z Collecting sortedcontainers==2.4.0 (from -r requirements-dev.txt (line 712))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9133871Z   Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9190949Z Collecting stevedore==5.9.1 (from -r requirements-dev.txt (line 716))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9198536Z   Using cached stevedore-5.9.1-py3-none-any.whl (54 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9302632Z Collecting tomli==2.5.0 (from -r requirements-dev.txt (line 720))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9310098Z   Using cached tomli-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (286 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9336680Z Collecting tomli-w==1.2.0 (from -r requirements-dev.txt (line 787))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9343729Z   Using cached tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9387964Z Collecting typing-extensions==4.16.0 (from -r requirements-dev.txt (line 791))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9395784Z   Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9456717Z Collecting urllib3==2.8.0 (from -r requirements-dev.txt (line 795))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9464068Z   Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9510376Z Collecting waitress==3.0.2 (from -r requirements-dev.txt (line 799))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9517710Z   Using cached waitress-3.0.2-py3-none-any.whl (56 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9578937Z Collecting werkzeug==3.1.9 (from -r requirements-dev.txt (line 803))
+sast	Install verified, pinned dependencies	2026-10-19T03:47:06.9586848Z   Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+sast	Install verified, pinned dependencies	2026-10-19T03:47:07.0485828Z Installing collected packages: sortedcontainers, boolean-py, waitress, urllib3, typing-extensions, tomli-w, tomli, stevedore, pyyaml, pyparsing, pyjwt, pygments, pluggy, platformdirs, pip-api, packaging, packageurl-python, msgpack, mdurl, markupsafe, license-expression, itsdangerous, iniconfig, idna, filelock, defusedxml, click, charset-normalizer, certifi, blinker, bcrypt, werkzeug, requests, pytest, py-serializable, pip-requirements-parser, markdown-it-py, jinja2, rich, flask, cyclonedx-python-lib, cachecontrol, bandit, pip-audit
+sast	Install verified, pinned dependencies	2026-10-19T03:47:08.9851747Z 
+sast	Install verified, pinned dependencies	2026-10-19T03:47:08.9875897Z Successfully installed bandit-1.9.4 bcrypt-5.0.0 blinker-1.9.0 boolean-py-5.0 cachecontrol-0.14.4 certifi-2026.10.18 charset-normalizer-3.5.2 click-8.5.0 cyclonedx-python-lib-11.12.0 defusedxml-0.7.1 filelock-4.2.4 flask-3.1.3 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jinja2-3.1.6 license-expression-30.4.4 markdown-it-py-4.2.0 markupsafe-3.0.4 mdurl-0.1.2 msgpack-1.2.3 packageurl-python-0.17.6 packaging-26.3 pip-api-0.0.35 pip-audit-2.10.1 pip-requirements-parser-32.0.1 platformdirs-4.13.5 pluggy-1.7.0 py-serializable-2.1.0 pygments-2.21.0 pyjwt-2.15.1 pyparsing-3.3.3 pytest-9.1.1 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 sortedcontainers-2.4.0 stevedore-5.9.1 tomli-2.5.0 tomli-w-1.2.0 typing-extensions-4.16.0 urllib3-2.8.0 waitress-3.0.2 werkzeug-3.1.9
+sast	Prepare reports	﻿2026-10-19T03:47:09.0602848Z ##[group]Run mkdir -p reports
+sast	Prepare reports	2026-10-19T03:47:09.0603060Z ^[[36;1mmkdir -p reports^[[0m
+sast	Prepare reports	2026-10-19T03:47:09.0654969Z shell: /usr/bin/bash -e {0}
+sast	Prepare reports	2026-10-19T03:47:09.0655124Z env:
+sast	Prepare reports	2026-10-19T03:47:09.0655409Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Prepare reports	2026-10-19T03:47:09.0655695Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sast	Prepare reports	2026-10-19T03:47:09.0655937Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Prepare reports	2026-10-19T03:47:09.0656149Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Prepare reports	2026-10-19T03:47:09.0656366Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Prepare reports	2026-10-19T03:47:09.0656582Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sast	Prepare reports	2026-10-19T03:47:09.0656767Z ##[endgroup]
+sast	Bandit SAST	﻿2026-10-19T03:47:09.0763997Z ##[group]Run bandit -r app run.py -f json -o reports/bandit.json
+sast	Bandit SAST	2026-10-19T03:47:09.0764277Z ^[[36;1mbandit -r app run.py -f json -o reports/bandit.json^[[0m
+sast	Bandit SAST	2026-10-19T03:47:09.0811168Z shell: /usr/bin/bash -e {0}
+sast	Bandit SAST	2026-10-19T03:47:09.0811330Z env:
+sast	Bandit SAST	2026-10-19T03:47:09.0811485Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Bandit SAST	2026-10-19T03:47:09.0811725Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sast	Bandit SAST	2026-10-19T03:47:09.0811960Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Bandit SAST	2026-10-19T03:47:09.0812170Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Bandit SAST	2026-10-19T03:47:09.0812383Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Bandit SAST	2026-10-19T03:47:09.0812598Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sast	Bandit SAST	2026-10-19T03:47:09.0812779Z ##[endgroup]
+sast	Bandit SAST	2026-10-19T03:47:09.1890668Z [main]	INFO	profile include tests: None
+sast	Bandit SAST	2026-10-19T03:47:09.1891100Z [main]	INFO	profile exclude tests: None
+sast	Bandit SAST	2026-10-19T03:47:09.1891376Z [main]	INFO	cli include tests: None
+sast	Bandit SAST	2026-10-19T03:47:09.1891772Z [main]	INFO	cli exclude tests: None
+sast	Bandit SAST	2026-10-19T03:47:09.2000514Z [tester]	WARNING	nosec encountered (B105), but no failed test on file app/__init__.py:183
+sast	Bandit SAST	2026-10-19T03:47:09.2001532Z [tester]	WARNING	nosec encountered (B105), but no failed test on file app/__init__.py:183
+sast	Bandit SAST	2026-10-19T03:47:09.2002081Z [tester]	WARNING	nosec encountered (B105), but no failed test on file app/__init__.py:183
+sast	Bandit SAST	2026-10-19T03:47:09.2026463Z [json]	INFO	JSON output written to file: reports/bandit.json
+sast	Preserve results even if a check fails	﻿2026-10-19T03:47:09.2253054Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2253292Z with:
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2253406Z   name: sast-reports
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2253528Z   path: reports/
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2253650Z   if-no-files-found: warn
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2253782Z   retention-days: 30
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2253906Z   compression-level: 6
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2254029Z   overwrite: false
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2254152Z   include-hidden-files: false
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2254291Z   archive: true
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2254401Z env:
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2254547Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2254801Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2255040Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2255254Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2255645Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2255887Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.2256066Z ##[endgroup]
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.3162578Z With the provided path, there will be 1 file uploaded
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.3163168Z Artifact name is valid!
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.3163387Z Root directory input is valid!
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.5958803Z Uploading artifact: sast-reports.zip
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.5986143Z Beginning upload of artifact content to blob storage
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.7536362Z Uploaded bytes 375
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.7880463Z Finished uploading artifact content to blob storage!
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.7880889Z SHA256 digest of uploaded artifact is 3984164d15955e0d57bc68ef52cfd9805048c989c00bce4042f243f8a59cdd72
+sast	Preserve results even if a check fails	2026-10-19T03:47:09.7881187Z Finalizing artifact upload
+sast	Preserve results even if a check fails	2026-10-19T03:47:10.0706152Z Artifact sast-reports successfully finalized. Artifact ID 12162420528
+sast	Preserve results even if a check fails	2026-10-19T03:47:10.0706692Z Artifact sast-reports has been successfully uploaded! Final size is 375 bytes. Artifact ID is 12162420528
+sast	Preserve results even if a check fails	2026-10-19T03:47:10.0708918Z Artifact download URL: https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39196313211/artifacts/12162420528
+sast	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-19T03:47:10.0840167Z Post job cleanup.
+sast	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:10.1588192Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f, not saving cache.
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T03:47:10.1684434Z Post job cleanup.
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2210330Z [command]/usr/bin/git version
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2250005Z git version 2.55.0
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2295388Z Temporarily overriding HOME='/home/runner/work/_temp/7b39bdb3-c69c-41e9-9b17-b6a7aeefe055' before making global git config changes
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2296115Z Adding repository directory to the temporary git global config as a safe directory
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2296700Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2320089Z Removing SSH command configuration
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2330451Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2353158Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2619685Z Removing HTTP extra header
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2620328Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2661877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2923085Z Removing includeIf entries pointing to credentials config files
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2929804Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2978777Z includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2987102Z includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2988585Z includeif.gitdir:/github/workspace/.git.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2989085Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.2992855Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3051297Z /home/runner/work/_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3069892Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-3cba7415\-c60f\-4c10\-afd3\-e8fe7ef46cb0\.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3124720Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3147945Z /home/runner/work/_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3155172Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-3cba7415\-c60f\-4c10\-afd3\-e8fe7ef46cb0\.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3194213Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3229262Z /github/runner_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3240745Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-3cba7415\-c60f\-4c10\-afd3\-e8fe7ef46cb0\.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3300185Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3338712Z /github/runner_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3346962Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-3cba7415\-c60f\-4c10\-afd3\-e8fe7ef46cb0\.config
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3404776Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sast	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:10.3679353Z Removing credentials config '/home/runner/work/_temp/git-credentials-3cba7415-c60f-4c10-afd3-e8fe7ef46cb0.config'
+sast	Complete job	﻿2026-10-19T03:47:10.3803821Z Cleaning up orphan processes
+tests	Set up job	﻿2026-10-19T03:47:02.9582508Z Current runner version: '2.337.0'
+tests	Set up job	2026-10-19T03:47:02.9607443Z ##[group]Runner Image Provisioner
+tests	Set up job	2026-10-19T03:47:02.9608833Z Hosted Compute Agent
+tests	Set up job	2026-10-19T03:47:02.9609430Z Version: 20261012.601
+tests	Set up job	2026-10-19T03:47:02.9610000Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+tests	Set up job	2026-10-19T03:47:02.9610726Z Build Date: 2026-10-12T17:48:21Z
+tests	Set up job	2026-10-19T03:47:02.9611344Z Worker ID: {25e19752-6a48-4805-a103-dd2a1d616aa6}
+tests	Set up job	2026-10-19T03:47:02.9611992Z Region: westus3
+tests	Set up job	2026-10-19T03:47:02.9612504Z Cloud: Azure
+tests	Set up job	2026-10-19T03:47:02.9613000Z ##[endgroup]
+tests	Set up job	2026-10-19T03:47:02.9614645Z ##[group]Operating System
+tests	Set up job	2026-10-19T03:47:02.9615229Z Ubuntu
+tests	Set up job	2026-10-19T03:47:02.9615684Z 24.04.5
+tests	Set up job	2026-10-19T03:47:02.9616230Z LTS
+tests	Set up job	2026-10-19T03:47:02.9616702Z ##[endgroup]
+tests	Set up job	2026-10-19T03:47:02.9617251Z ##[group]Runner Image
+tests	Set up job	2026-10-19T03:47:02.9618093Z Image: ubuntu-24.04
+tests	Set up job	2026-10-19T03:47:02.9618587Z Version: 20261012.334.1
+tests	Set up job	2026-10-19T03:47:02.9619958Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+tests	Set up job	2026-10-19T03:47:02.9621591Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+tests	Set up job	2026-10-19T03:47:02.9622453Z ##[endgroup]
+tests	Set up job	2026-10-19T03:47:02.9623492Z ##[group]GITHUB_TOKEN Permissions
+tests	Set up job	2026-10-19T03:47:02.9625692Z Contents: read
+tests	Set up job	2026-10-19T03:47:02.9626247Z Metadata: read
+tests	Set up job	2026-10-19T03:47:02.9626839Z ##[endgroup]
+tests	Set up job	2026-10-19T03:47:02.9629108Z Secret source: Actions
+tests	Set up job	2026-10-19T03:47:02.9630039Z Cache mode: write
+tests	Set up job	2026-10-19T03:47:02.9630683Z Prepare workflow directory
+tests	Set up job	2026-10-19T03:47:02.9966948Z Prepare all required actions
+tests	Set up job	2026-10-19T03:47:03.0015996Z Getting action download info
+tests	Set up job	2026-10-19T03:47:03.3012733Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+tests	Set up job	2026-10-19T03:47:03.3983273Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+tests	Set up job	2026-10-19T03:47:03.4992262Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+tests	Set up job	2026-10-19T03:47:04.3937754Z Complete job name: tests
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T03:47:04.4831232Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4832404Z with:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4832991Z   repository: 0D00-0721-0/hdu-is-work1-secure-api
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4837378Z   token: ***
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4838169Z   ssh-strict: true
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4838690Z   ssh-user: git
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4839220Z   persist-credentials: true
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4839783Z   clean: true
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4840290Z   sparse-checkout-cone-mode: true
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4840881Z   fetch-depth: 1
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4841375Z   fetch-tags: false
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4841879Z   show-progress: true
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4842386Z   lfs: false
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4842862Z   submodules: false
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4843390Z   set-safe-directory: true
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4843977Z   allow-unsafe-pr-checkout: false
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.4844948Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5806978Z Syncing repository: 0D00-0721-0/hdu-is-work1-secure-api
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5809563Z ##[group]Getting Git version info
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5810929Z Working directory is '/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api'
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5812391Z [command]/usr/bin/git version
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5924442Z git version 2.55.0
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5954618Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5969789Z Temporarily overriding HOME='/home/runner/work/_temp/30c41ebd-4a0b-4269-8cb9-86d64bd1a53c' before making global git config changes
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5971821Z Adding repository directory to the temporary git global config as a safe directory
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.5977964Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6024576Z Deleting the contents of '/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api'
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6027518Z ##[group]Determining repository object format
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6029470Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6030345Z ##[group]Initializing the repository
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6035156Z [command]/usr/bin/git init /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6134825Z hint: Using 'master' as the name for the initial branch. This default branch name
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6137327Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6139909Z hint: to use in all of your new repositories, which will suppress this warning,
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6141451Z hint: call:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6142403Z hint:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6143603Z hint: 	git config --global init.defaultBranch <name>
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6144939Z hint:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6146204Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6148258Z hint: 'development'. The just-created branch can be renamed via this command:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6149991Z hint:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6150928Z hint: 	git branch -m <name>
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6151990Z hint:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6153309Z hint: Disable this message with "git config set advice.defaultBranchName false"
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6163340Z Initialized empty Git repository in /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6174749Z [command]/usr/bin/git remote add origin https://github.com/0D00-0721-0/hdu-is-work1-secure-api
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6218338Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6220565Z ##[group]Disabling automatic garbage collection
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6222832Z [command]/usr/bin/git config --local gc.auto 0
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6250499Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6252616Z ##[group]Setting up auth
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6254229Z Removing SSH command configuration
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6256716Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6321618Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6654571Z Removing HTTP extra header
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6663647Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6695893Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6899574Z Removing includeIf entries pointing to credentials config files
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6902942Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.6935294Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7130164Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7165042Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path /home/runner/work/_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7192484Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7226950Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7256519Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7282072Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7282999Z ##[group]Fetching the repository
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.7289215Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f:refs/remotes/origin/main
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2021133Z From https://github.com/0D00-0721-0/hdu-is-work1-secure-api
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2022810Z  * [new ref]         d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f -> origin/main
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2031264Z [command]/usr/bin/git branch --list --remote origin/main
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2055223Z   origin/main
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2063368Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2085428Z d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2088855Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2090092Z ##[group]Determining the checkout info
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2091545Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2095441Z [command]/usr/bin/git sparse-checkout disable
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2140745Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2168872Z ##[group]Checking out the ref
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2172942Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2243268Z Switched to a new branch 'main'
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2247346Z branch 'main' set up to track 'origin/main'.
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2253269Z ##[endgroup]
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2296235Z [command]/usr/bin/git log -1 --format=%H
+tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.2321034Z d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-19T03:47:05.2600802Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2601565Z with:
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2601965Z   python-version: 3.12
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2602416Z   cache: pip
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2602870Z   cache-dependency-path: requirements-dev.txt
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2603432Z   check-latest: false
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2607779Z   token: ***
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2608252Z   update-environment: true
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2608722Z   allow-prereleases: false
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2609184Z   freethreaded: false
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.2609609Z ##[endgroup]
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.3787529Z ##[group]Installed versions
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.3870079Z Successfully set up CPython (3.12.15)
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.3871303Z ##[endgroup]
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.4153245Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.7144906Z /home/runner/.cache/pip
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.9416802Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.0078102Z Received 8356677 of 8356677 (100.0%), 9.4 MBs/sec
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.0078911Z Cache Size: ~8 MB (8356677 B)
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.0105025Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a74b2507-6143-48ca-a7f4-bceb358e6fb9/cache.tzst -P -C /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api --use-compress-program unzstd
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.0346887Z Cache restored successfully
+tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.0352501Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f
+tests	Install verified, pinned dependencies	﻿2026-10-19T03:47:07.0475426Z ##[group]Run python -m pip install --require-hashes -r requirements-dev.txt
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0476212Z ^[[36;1mpython -m pip install --require-hashes -r requirements-dev.txt^[[0m
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0660835Z shell: /usr/bin/bash -e {0}
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0661268Z env:
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0661598Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0662097Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0662570Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0663007Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0663442Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0664181Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.0664599Z ##[endgroup]
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6282834Z Collecting bandit==1.9.4 (from -r requirements-dev.txt (line 3))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6297574Z   Using cached bandit-1.9.4-py3-none-any.whl (134 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6596608Z Collecting bcrypt==5.0.0 (from -r requirements-dev.txt (line 7))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6610599Z   Using cached bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6665621Z Collecting blinker==1.9.0 (from -r requirements-dev.txt (line 72))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6677475Z   Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6728901Z Collecting boolean-py==5.0 (from -r requirements-dev.txt (line 78))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6739193Z   Using cached boolean_py-5.0-py3-none-any.whl (26 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6802313Z Collecting cachecontrol==0.14.4 (from -r requirements-dev.txt (line 82))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6813134Z   Using cached cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6907363Z Collecting certifi==2026.10.18 (from -r requirements-dev.txt (line 86))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.6920430Z   Using cached certifi-2026.10.18-py3-none-any.whl (134 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8015273Z Collecting charset-normalizer==3.5.2 (from -r requirements-dev.txt (line 90))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8029615Z   Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8134428Z Collecting click==8.5.0 (from -r requirements-dev.txt (line 264))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8145317Z   Using cached click-8.5.0-py3-none-any.whl (125 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8303188Z Collecting cyclonedx-python-lib==11.12.0 (from -r requirements-dev.txt (line 270))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8317425Z   Using cached cyclonedx_python_lib-11.12.0-py3-none-any.whl (529 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8384277Z Collecting defusedxml==0.7.1 (from -r requirements-dev.txt (line 274))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8397241Z   Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8543863Z Collecting filelock==4.2.4 (from -r requirements-dev.txt (line 278))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8560906Z   Using cached filelock-4.2.4-py3-none-any.whl (162 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8637319Z Collecting flask==3.1.3 (from -r requirements-dev.txt (line 282))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8651035Z   Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8717383Z Collecting idna==3.20 (from -r requirements-dev.txt (line 286))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8729889Z   Using cached idna-3.20-py3-none-any.whl (69 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8777528Z Collecting iniconfig==2.3.1 (from -r requirements-dev.txt (line 290))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8790148Z   Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8837159Z Collecting itsdangerous==2.2.0 (from -r requirements-dev.txt (line 294))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8848734Z   Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8912235Z Collecting jinja2==3.1.6 (from -r requirements-dev.txt (line 300))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8924419Z   Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.8997080Z Collecting license-expression==30.4.4 (from -r requirements-dev.txt (line 306))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9010045Z   Using cached license_expression-30.4.4-py3-none-any.whl (120 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9095003Z Collecting markdown-it-py==4.2.0 (from -r requirements-dev.txt (line 310))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9107308Z   Using cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9545350Z Collecting markupsafe==3.0.4 (from -r requirements-dev.txt (line 314))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9558889Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9597512Z Collecting mdurl==0.1.2 (from -r requirements-dev.txt (line 471))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:07.9609475Z   Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0208062Z Collecting msgpack==1.2.3 (from -r requirements-dev.txt (line 475))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0222566Z   Using cached msgpack-1.2.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (472 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0311448Z Collecting packageurl-python==0.17.6 (from -r requirements-dev.txt (line 568))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0324409Z   Using cached packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0405936Z Collecting packaging==26.3 (from -r requirements-dev.txt (line 572))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0420867Z   Using cached packaging-26.3-py3-none-any.whl (129 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0443457Z Requirement already satisfied: pip==26.2.1 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from -r requirements-dev.txt (line 579)) (26.2.1)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0489070Z Collecting pip-api==0.0.35 (from -r requirements-dev.txt (line 583))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0503184Z   Using cached pip_api-0.0.35-py3-none-any.whl (123 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0601376Z Collecting pip-audit==2.10.1 (from -r requirements-dev.txt (line 587))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0615215Z   Using cached pip_audit-2.10.1-py3-none-any.whl (62 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0680735Z Collecting pip-requirements-parser==32.0.1 (from -r requirements-dev.txt (line 591))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0692657Z   Using cached pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0803146Z Collecting platformdirs==4.13.5 (from -r requirements-dev.txt (line 595))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0816072Z   Using cached platformdirs-4.13.5-py3-none-any.whl (32 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0869580Z Collecting pluggy==1.7.0 (from -r requirements-dev.txt (line 599))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0881753Z   Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0960390Z Collecting py-serializable==2.1.0 (from -r requirements-dev.txt (line 603))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.0972915Z   Using cached py_serializable-2.1.0-py3-none-any.whl (23 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1074308Z Collecting pygments==2.21.0 (from -r requirements-dev.txt (line 607))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1086949Z   Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1201448Z Collecting pyjwt==2.15.1 (from -r requirements-dev.txt (line 613))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1216163Z   Using cached pyjwt-2.15.1-py3-none-any.whl (33 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1345783Z Collecting pyparsing==3.3.3 (from -r requirements-dev.txt (line 617))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1356689Z   Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1515232Z Collecting pytest==9.1.1 (from -r requirements-dev.txt (line 621))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1528326Z   Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1801968Z Collecting pyyaml==6.0.3 (from -r requirements-dev.txt (line 625))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1812629Z   Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1941407Z Collecting requests==2.34.2 (from -r requirements-dev.txt (line 700))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.1951949Z   Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2138455Z Collecting rich==15.0.0 (from -r requirements-dev.txt (line 706))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2148824Z   Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2220608Z Collecting sortedcontainers==2.4.0 (from -r requirements-dev.txt (line 712))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2232177Z   Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2331294Z Collecting stevedore==5.9.1 (from -r requirements-dev.txt (line 716))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2345205Z   Using cached stevedore-5.9.1-py3-none-any.whl (54 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2527388Z Collecting tomli==2.5.0 (from -r requirements-dev.txt (line 720))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2539094Z   Using cached tomli-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (286 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2585563Z Collecting tomli-w==1.2.0 (from -r requirements-dev.txt (line 787))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2597362Z   Using cached tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2675914Z Collecting typing-extensions==4.16.0 (from -r requirements-dev.txt (line 791))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2689201Z   Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2796773Z Collecting urllib3==2.8.0 (from -r requirements-dev.txt (line 795))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2807304Z   Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2890267Z Collecting waitress==3.0.2 (from -r requirements-dev.txt (line 799))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.2901284Z   Using cached waitress-3.0.2-py3-none-any.whl (56 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.3006297Z Collecting werkzeug==3.1.9 (from -r requirements-dev.txt (line 803))
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.3017236Z   Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+tests	Install verified, pinned dependencies	2026-10-19T03:47:08.4347164Z Installing collected packages: sortedcontainers, boolean-py, waitress, urllib3, typing-extensions, tomli-w, tomli, stevedore, pyyaml, pyparsing, pyjwt, pygments, pluggy, platformdirs, pip-api, packaging, packageurl-python, msgpack, mdurl, markupsafe, license-expression, itsdangerous, iniconfig, idna, filelock, defusedxml, click, charset-normalizer, certifi, blinker, bcrypt, werkzeug, requests, pytest, py-serializable, pip-requirements-parser, markdown-it-py, jinja2, rich, flask, cyclonedx-python-lib, cachecontrol, bandit, pip-audit
+tests	Install verified, pinned dependencies	2026-10-19T03:47:11.0693427Z 
+tests	Install verified, pinned dependencies	2026-10-19T03:47:11.0731598Z Successfully installed bandit-1.9.4 bcrypt-5.0.0 blinker-1.9.0 boolean-py-5.0 cachecontrol-0.14.4 certifi-2026.10.18 charset-normalizer-3.5.2 click-8.5.0 cyclonedx-python-lib-11.12.0 defusedxml-0.7.1 filelock-4.2.4 flask-3.1.3 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jinja2-3.1.6 license-expression-30.4.4 markdown-it-py-4.2.0 markupsafe-3.0.4 mdurl-0.1.2 msgpack-1.2.3 packageurl-python-0.17.6 packaging-26.3 pip-api-0.0.35 pip-audit-2.10.1 pip-requirements-parser-32.0.1 platformdirs-4.13.5 pluggy-1.7.0 py-serializable-2.1.0 pygments-2.21.0 pyjwt-2.15.1 pyparsing-3.3.3 pytest-9.1.1 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 sortedcontainers-2.4.0 stevedore-5.9.1 tomli-2.5.0 tomli-w-1.2.0 typing-extensions-4.16.0 urllib3-2.8.0 waitress-3.0.2 werkzeug-3.1.9
+tests	Prepare reports	﻿2026-10-19T03:47:11.1904388Z ##[group]Run mkdir -p reports
+tests	Prepare reports	2026-10-19T03:47:11.1904710Z ^[[36;1mmkdir -p reports^[[0m
+tests	Prepare reports	2026-10-19T03:47:11.1942457Z shell: /usr/bin/bash -e {0}
+tests	Prepare reports	2026-10-19T03:47:11.1942745Z env:
+tests	Prepare reports	2026-10-19T03:47:11.1943013Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Prepare reports	2026-10-19T03:47:11.1943449Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+tests	Prepare reports	2026-10-19T03:47:11.1943862Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Prepare reports	2026-10-19T03:47:11.1944244Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Prepare reports	2026-10-19T03:47:11.1944611Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Prepare reports	2026-10-19T03:47:11.1944988Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+tests	Prepare reports	2026-10-19T03:47:11.1945304Z ##[endgroup]
+tests	API security and regression tests	﻿2026-10-19T03:47:11.2056656Z ##[group]Run python -m pytest -q --junitxml=reports/pytest.xml
+tests	API security and regression tests	2026-10-19T03:47:11.2057216Z ^[[36;1mpython -m pytest -q --junitxml=reports/pytest.xml^[[0m
+tests	API security and regression tests	2026-10-19T03:47:11.2098581Z shell: /usr/bin/bash -e {0}
+tests	API security and regression tests	2026-10-19T03:47:11.2098884Z env:
+tests	API security and regression tests	2026-10-19T03:47:11.2099168Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	API security and regression tests	2026-10-19T03:47:11.2099605Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+tests	API security and regression tests	2026-10-19T03:47:11.2100028Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	API security and regression tests	2026-10-19T03:47:11.2100404Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	API security and regression tests	2026-10-19T03:47:11.2100767Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	API security and regression tests	2026-10-19T03:47:11.2101139Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+tests	API security and regression tests	2026-10-19T03:47:11.2101460Z ##[endgroup]
+tests	API security and regression tests	2026-10-19T03:47:15.8111205Z .............................                                            [100%]
+tests	API security and regression tests	2026-10-19T03:47:15.8112318Z 29 passed in 4.31s
+tests	Preserve results even if a check fails	﻿2026-10-19T03:47:15.8676511Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8676930Z with:
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8677138Z   name: tests-reports
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8677360Z   path: reports/
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8677918Z   if-no-files-found: warn
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8678154Z   retention-days: 30
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8678380Z   compression-level: 6
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8678596Z   overwrite: false
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8678810Z   include-hidden-files: false
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8679054Z   archive: true
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8679253Z env:
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8679496Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8679910Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8680320Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8680696Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8681061Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8681476Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+tests	Preserve results even if a check fails	2026-10-19T03:47:15.8681788Z ##[endgroup]
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.0120060Z With the provided path, there will be 1 file uploaded
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.0121127Z Artifact name is valid!
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.0121608Z Root directory input is valid!
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.3337109Z Uploading artifact: tests-reports.zip
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.3376230Z Beginning upload of artifact content to blob storage
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.5608133Z Uploaded bytes 656
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.6151680Z Finished uploading artifact content to blob storage!
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.6152936Z SHA256 digest of uploaded artifact is ba2d13f3cc78797e763bd90cddb4fa64860eab849917765ab3b22e8ac6e3b1e6
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.6154000Z Finalizing artifact upload
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.9657933Z Artifact tests-reports successfully finalized. Artifact ID 12162291440
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.9658938Z Artifact tests-reports has been successfully uploaded! Final size is 656 bytes. Artifact ID is 12162291440
+tests	Preserve results even if a check fails	2026-10-19T03:47:16.9662527Z Artifact download URL: https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39196313211/artifacts/12162291440
+tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-19T03:47:16.9828986Z Post job cleanup.
+tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:17.0974243Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f, not saving cache.
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T03:47:17.1079981Z Post job cleanup.
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.1962438Z [command]/usr/bin/git version
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2027604Z git version 2.55.0
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2089339Z Temporarily overriding HOME='/home/runner/work/_temp/1a2a79b6-a77a-47c1-8e04-74e7071e19d1' before making global git config changes
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2091251Z Adding repository directory to the temporary git global config as a safe directory
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2093182Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2127320Z Removing SSH command configuration
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2136845Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2188571Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2481729Z Removing HTTP extra header
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2489463Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2547045Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2846639Z Removing includeIf entries pointing to credentials config files
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2855228Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2899700Z includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2901997Z includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2903474Z includeif.gitdir:/github/workspace/.git.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2904325Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2915656Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2948956Z /home/runner/work/_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.2963377Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-76e5ae4c\-97ca\-4d92\-8ab0\-3642637322a3\.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3027094Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3062016Z /home/runner/work/_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3102960Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-76e5ae4c\-97ca\-4d92\-8ab0\-3642637322a3\.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3188375Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3190151Z /github/runner_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3192919Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-76e5ae4c\-97ca\-4d92\-8ab0\-3642637322a3\.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3217796Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3241118Z /github/runner_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3269274Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-76e5ae4c\-97ca\-4d92\-8ab0\-3642637322a3\.config
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3285806Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:17.3489450Z Removing credentials config '/home/runner/work/_temp/git-credentials-76e5ae4c-97ca-4d92-8ab0-3642637322a3.config'
+tests	Complete job	﻿2026-10-19T03:47:17.3624417Z Cleaning up orphan processes
+sca	Set up job	﻿2026-10-19T03:47:03.6366446Z Current runner version: '2.337.0'
+sca	Set up job	2026-10-19T03:47:03.6393212Z ##[group]Runner Image Provisioner
+sca	Set up job	2026-10-19T03:47:03.6394145Z Hosted Compute Agent
+sca	Set up job	2026-10-19T03:47:03.6394915Z Version: 20261012.601
+sca	Set up job	2026-10-19T03:47:03.6395560Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+sca	Set up job	2026-10-19T03:47:03.6396321Z Build Date: 2026-10-12T17:48:21Z
+sca	Set up job	2026-10-19T03:47:03.6397052Z Worker ID: {f1bc34f4-9f9d-4b30-98dc-45d5f1ba2d43}
+sca	Set up job	2026-10-19T03:47:03.6398016Z Region: westus
+sca	Set up job	2026-10-19T03:47:03.6398667Z Cloud: Azure
+sca	Set up job	2026-10-19T03:47:03.6399201Z ##[endgroup]
+sca	Set up job	2026-10-19T03:47:03.6400795Z ##[group]Operating System
+sca	Set up job	2026-10-19T03:47:03.6401547Z Ubuntu
+sca	Set up job	2026-10-19T03:47:03.6402077Z 24.04.5
+sca	Set up job	2026-10-19T03:47:03.6402699Z LTS
+sca	Set up job	2026-10-19T03:47:03.6403210Z ##[endgroup]
+sca	Set up job	2026-10-19T03:47:03.6403750Z ##[group]Runner Image
+sca	Set up job	2026-10-19T03:47:03.6404400Z Image: ubuntu-24.04
+sca	Set up job	2026-10-19T03:47:03.6404962Z Version: 20261012.334.1
+sca	Set up job	2026-10-19T03:47:03.6406413Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+sca	Set up job	2026-10-19T03:47:03.6408429Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+sca	Set up job	2026-10-19T03:47:03.6409494Z ##[endgroup]
+sca	Set up job	2026-10-19T03:47:03.6410645Z ##[group]GITHUB_TOKEN Permissions
+sca	Set up job	2026-10-19T03:47:03.6412773Z Contents: read
+sca	Set up job	2026-10-19T03:47:03.6413391Z Metadata: read
+sca	Set up job	2026-10-19T03:47:03.6414005Z ##[endgroup]
+sca	Set up job	2026-10-19T03:47:03.6416068Z Secret source: Actions
+sca	Set up job	2026-10-19T03:47:03.6417116Z Cache mode: write
+sca	Set up job	2026-10-19T03:47:03.6418264Z Prepare workflow directory
+sca	Set up job	2026-10-19T03:47:03.6761108Z Prepare all required actions
+sca	Set up job	2026-10-19T03:47:03.6811367Z Getting action download info
+sca	Set up job	2026-10-19T03:47:04.0382067Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+sca	Set up job	2026-10-19T03:47:04.1404391Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+sca	Set up job	2026-10-19T03:47:04.2637893Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+sca	Set up job	2026-10-19T03:47:04.7873592Z Complete job name: sca
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T03:47:04.8684374Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8686088Z with:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8686963Z   repository: 0D00-0721-0/hdu-is-work1-secure-api
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8694673Z   token: ***
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8695503Z   ssh-strict: true
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8696259Z   ssh-user: git
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8696924Z   persist-credentials: true
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8697634Z   clean: true
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8698097Z   sparse-checkout-cone-mode: true
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8698624Z   fetch-depth: 1
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8699053Z   fetch-tags: false
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8699492Z   show-progress: true
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8699940Z   lfs: false
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8700347Z   submodules: false
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8700789Z   set-safe-directory: true
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8701287Z   allow-unsafe-pr-checkout: false
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.8702223Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9697783Z Syncing repository: 0D00-0721-0/hdu-is-work1-secure-api
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9700839Z ##[group]Getting Git version info
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9702338Z Working directory is '/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api'
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9704271Z [command]/usr/bin/git version
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9801517Z git version 2.55.0
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9851162Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9859500Z Temporarily overriding HOME='/home/runner/work/_temp/04f0049a-fe65-4e28-9b56-d3f8cb224edb' before making global git config changes
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9861857Z Adding repository directory to the temporary git global config as a safe directory
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9864130Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9903635Z Deleting the contents of '/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api'
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9907736Z ##[group]Determining repository object format
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9910002Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9911600Z ##[group]Initializing the repository
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:04.9915318Z [command]/usr/bin/git init /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0030916Z hint: Using 'master' as the name for the initial branch. This default branch name
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0032706Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0034318Z hint: to use in all of your new repositories, which will suppress this warning,
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0035539Z hint: call:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0036165Z hint:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0036968Z hint: 	git config --global init.defaultBranch <name>
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0038171Z hint:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0039253Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0040832Z hint: 'development'. The just-created branch can be renamed via this command:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0042073Z hint:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0042714Z hint: 	git branch -m <name>
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0043526Z hint:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0044601Z hint: Disable this message with "git config set advice.defaultBranchName false"
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0046593Z Initialized empty Git repository in /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0050042Z [command]/usr/bin/git remote add origin https://github.com/0D00-0721-0/hdu-is-work1-secure-api
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0106062Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0107753Z ##[group]Disabling automatic garbage collection
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0109233Z [command]/usr/bin/git config --local gc.auto 0
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0147935Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0149531Z ##[group]Setting up auth
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0150340Z Removing SSH command configuration
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0170185Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0206537Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0584829Z Removing HTTP extra header
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0590348Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0625260Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0849651Z Removing includeIf entries pointing to credentials config files
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0854701Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.0893364Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1131134Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1171685Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path /home/runner/work/_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1205652Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1242854Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1276609Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1309885Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1311278Z ##[group]Fetching the repository
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.1317675Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f:refs/remotes/origin/main
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6103024Z From https://github.com/0D00-0721-0/hdu-is-work1-secure-api
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6105691Z  * [new ref]         d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f -> origin/main
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6115823Z [command]/usr/bin/git branch --list --remote origin/main
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6145144Z   origin/main
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6155411Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6181838Z d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6187115Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6188871Z ##[group]Determining the checkout info
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6190565Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6191924Z [command]/usr/bin/git sparse-checkout disable
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6246227Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6282523Z ##[group]Checking out the ref
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6286172Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6382269Z Switched to a new branch 'main'
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6388621Z branch 'main' set up to track 'origin/main'.
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6396179Z ##[endgroup]
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6451438Z [command]/usr/bin/git log -1 --format=%H
+sca	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:05.6480032Z d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-19T03:47:05.6863528Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6865243Z with:
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6866057Z   python-version: 3.12
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6866973Z   cache: pip
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6868344Z   cache-dependency-path: requirements-dev.txt
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6869609Z   check-latest: false
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6879792Z   token: ***
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6880736Z   update-environment: true
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6881765Z   allow-prereleases: false
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6882764Z   freethreaded: false
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.6883661Z ##[endgroup]
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.8154391Z ##[group]Installed versions
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.8237458Z Successfully set up CPython (3.12.15)
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.8239992Z ##[endgroup]
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:05.8556320Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.2081621Z /home/runner/.cache/pip
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:06.5248676Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.8142848Z Received 0 of 8356677 (0.0%), 0.0 MBs/sec
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.9009690Z Received 8356677 of 8356677 (100.0%), 7.3 MBs/sec
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.9010763Z Cache Size: ~8 MB (8356677 B)
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.9056558Z [command]/usr/bin/tar -xf /home/runner/work/_temp/f838bdb7-dc2b-4987-add6-0bb7963a09b2/cache.tzst -P -C /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api --use-compress-program unzstd
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.9516429Z Cache restored successfully
+sca	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:07.9526411Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f
+sca	Install verified, pinned dependencies	﻿2026-10-19T03:47:07.9663388Z ##[group]Run python -m pip install --require-hashes -r requirements-dev.txt
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9664065Z ^[[36;1mpython -m pip install --require-hashes -r requirements-dev.txt^[[0m
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9940928Z shell: /usr/bin/bash -e {0}
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9941314Z env:
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9941670Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9942257Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9942844Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9943368Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9943923Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9944736Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sca	Install verified, pinned dependencies	2026-10-19T03:47:07.9945192Z ##[endgroup]
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6146907Z Collecting bandit==1.9.4 (from -r requirements-dev.txt (line 3))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6162423Z   Using cached bandit-1.9.4-py3-none-any.whl (134 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6505428Z Collecting bcrypt==5.0.0 (from -r requirements-dev.txt (line 7))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6519664Z   Using cached bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6578325Z Collecting blinker==1.9.0 (from -r requirements-dev.txt (line 72))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6590979Z   Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6646918Z Collecting boolean-py==5.0 (from -r requirements-dev.txt (line 78))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6659426Z   Using cached boolean_py-5.0-py3-none-any.whl (26 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6730032Z Collecting cachecontrol==0.14.4 (from -r requirements-dev.txt (line 82))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6742277Z   Using cached cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6850229Z Collecting certifi==2026.10.18 (from -r requirements-dev.txt (line 86))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.6862678Z   Using cached certifi-2026.10.18-py3-none-any.whl (134 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8229785Z Collecting charset-normalizer==3.5.2 (from -r requirements-dev.txt (line 90))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8244840Z   Using cached charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8357877Z Collecting click==8.5.0 (from -r requirements-dev.txt (line 264))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8370436Z   Using cached click-8.5.0-py3-none-any.whl (125 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8545404Z Collecting cyclonedx-python-lib==11.12.0 (from -r requirements-dev.txt (line 270))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8561433Z   Using cached cyclonedx_python_lib-11.12.0-py3-none-any.whl (529 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8629563Z Collecting defusedxml==0.7.1 (from -r requirements-dev.txt (line 274))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8641776Z   Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8796747Z Collecting filelock==4.2.4 (from -r requirements-dev.txt (line 278))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8809060Z   Using cached filelock-4.2.4-py3-none-any.whl (162 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8890935Z Collecting flask==3.1.3 (from -r requirements-dev.txt (line 282))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8904198Z   Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8976028Z Collecting idna==3.20 (from -r requirements-dev.txt (line 286))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.8987968Z   Using cached idna-3.20-py3-none-any.whl (69 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9036792Z Collecting iniconfig==2.3.1 (from -r requirements-dev.txt (line 290))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9048654Z   Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9095588Z Collecting itsdangerous==2.2.0 (from -r requirements-dev.txt (line 294))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9107072Z   Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9174161Z Collecting jinja2==3.1.6 (from -r requirements-dev.txt (line 300))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9185651Z   Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9259575Z Collecting license-expression==30.4.4 (from -r requirements-dev.txt (line 306))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9270623Z   Using cached license_expression-30.4.4-py3-none-any.whl (120 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9356632Z Collecting markdown-it-py==4.2.0 (from -r requirements-dev.txt (line 310))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9368406Z   Using cached markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9871393Z Collecting markupsafe==3.0.4 (from -r requirements-dev.txt (line 314))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9885788Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9922688Z Collecting mdurl==0.1.2 (from -r requirements-dev.txt (line 471))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:08.9934191Z   Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0626476Z Collecting msgpack==1.2.3 (from -r requirements-dev.txt (line 475))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0641382Z   Using cached msgpack-1.2.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (472 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0732777Z Collecting packageurl-python==0.17.6 (from -r requirements-dev.txt (line 568))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0744397Z   Using cached packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0826662Z Collecting packaging==26.3 (from -r requirements-dev.txt (line 572))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0839407Z   Using cached packaging-26.3-py3-none-any.whl (129 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0861078Z Requirement already satisfied: pip==26.2.1 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from -r requirements-dev.txt (line 579)) (26.2.1)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0906122Z Collecting pip-api==0.0.35 (from -r requirements-dev.txt (line 583))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.0919148Z   Using cached pip_api-0.0.35-py3-none-any.whl (123 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1020416Z Collecting pip-audit==2.10.1 (from -r requirements-dev.txt (line 587))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1031805Z   Using cached pip_audit-2.10.1-py3-none-any.whl (62 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1095466Z Collecting pip-requirements-parser==32.0.1 (from -r requirements-dev.txt (line 591))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1106799Z   Using cached pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1225218Z Collecting platformdirs==4.13.5 (from -r requirements-dev.txt (line 595))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1236824Z   Using cached platformdirs-4.13.5-py3-none-any.whl (32 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1292041Z Collecting pluggy==1.7.0 (from -r requirements-dev.txt (line 599))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1303822Z   Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1389635Z Collecting py-serializable==2.1.0 (from -r requirements-dev.txt (line 603))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1401494Z   Using cached py_serializable-2.1.0-py3-none-any.whl (23 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1508458Z Collecting pygments==2.21.0 (from -r requirements-dev.txt (line 607))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1520384Z   Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1638551Z Collecting pyjwt==2.15.1 (from -r requirements-dev.txt (line 613))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1650323Z   Using cached pyjwt-2.15.1-py3-none-any.whl (33 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1794150Z Collecting pyparsing==3.3.3 (from -r requirements-dev.txt (line 617))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1805775Z   Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1982513Z Collecting pytest==9.1.1 (from -r requirements-dev.txt (line 621))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.1995653Z   Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2303417Z Collecting pyyaml==6.0.3 (from -r requirements-dev.txt (line 625))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2318130Z   Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2456925Z Collecting requests==2.34.2 (from -r requirements-dev.txt (line 700))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2469442Z   Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2675067Z Collecting rich==15.0.0 (from -r requirements-dev.txt (line 706))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2686614Z   Using cached rich-15.0.0-py3-none-any.whl (310 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2760928Z Collecting sortedcontainers==2.4.0 (from -r requirements-dev.txt (line 712))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2772624Z   Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2882980Z Collecting stevedore==5.9.1 (from -r requirements-dev.txt (line 716))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.2894600Z   Using cached stevedore-5.9.1-py3-none-any.whl (54 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3096915Z Collecting tomli==2.5.0 (from -r requirements-dev.txt (line 720))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3110246Z   Using cached tomli-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (286 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3155491Z Collecting tomli-w==1.2.0 (from -r requirements-dev.txt (line 787))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3166822Z   Using cached tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3250539Z Collecting typing-extensions==4.16.0 (from -r requirements-dev.txt (line 791))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3263257Z   Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3379697Z Collecting urllib3==2.8.0 (from -r requirements-dev.txt (line 795))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3392108Z   Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3479334Z Collecting waitress==3.0.2 (from -r requirements-dev.txt (line 799))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3490710Z   Using cached waitress-3.0.2-py3-none-any.whl (56 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3606598Z Collecting werkzeug==3.1.9 (from -r requirements-dev.txt (line 803))
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.3619267Z   Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+sca	Install verified, pinned dependencies	2026-10-19T03:47:09.5121984Z Installing collected packages: sortedcontainers, boolean-py, waitress, urllib3, typing-extensions, tomli-w, tomli, stevedore, pyyaml, pyparsing, pyjwt, pygments, pluggy, platformdirs, pip-api, packaging, packageurl-python, msgpack, mdurl, markupsafe, license-expression, itsdangerous, iniconfig, idna, filelock, defusedxml, click, charset-normalizer, certifi, blinker, bcrypt, werkzeug, requests, pytest, py-serializable, pip-requirements-parser, markdown-it-py, jinja2, rich, flask, cyclonedx-python-lib, cachecontrol, bandit, pip-audit
+sca	Install verified, pinned dependencies	2026-10-19T03:47:12.5860994Z 
+sca	Install verified, pinned dependencies	2026-10-19T03:47:12.5902574Z Successfully installed bandit-1.9.4 bcrypt-5.0.0 blinker-1.9.0 boolean-py-5.0 cachecontrol-0.14.4 certifi-2026.10.18 charset-normalizer-3.5.2 click-8.5.0 cyclonedx-python-lib-11.12.0 defusedxml-0.7.1 filelock-4.2.4 flask-3.1.3 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jinja2-3.1.6 license-expression-30.4.4 markdown-it-py-4.2.0 markupsafe-3.0.4 mdurl-0.1.2 msgpack-1.2.3 packageurl-python-0.17.6 packaging-26.3 pip-api-0.0.35 pip-audit-2.10.1 pip-requirements-parser-32.0.1 platformdirs-4.13.5 pluggy-1.7.0 py-serializable-2.1.0 pygments-2.21.0 pyjwt-2.15.1 pyparsing-3.3.3 pytest-9.1.1 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 sortedcontainers-2.4.0 stevedore-5.9.1 tomli-2.5.0 tomli-w-1.2.0 typing-extensions-4.16.0 urllib3-2.8.0 waitress-3.0.2 werkzeug-3.1.9
+sca	Prepare reports	﻿2026-10-19T03:47:12.6924515Z ##[group]Run mkdir -p reports
+sca	Prepare reports	2026-10-19T03:47:12.6924873Z ^[[36;1mmkdir -p reports^[[0m
+sca	Prepare reports	2026-10-19T03:47:12.6994960Z shell: /usr/bin/bash -e {0}
+sca	Prepare reports	2026-10-19T03:47:12.6995234Z env:
+sca	Prepare reports	2026-10-19T03:47:12.6995526Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Prepare reports	2026-10-19T03:47:12.6995998Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sca	Prepare reports	2026-10-19T03:47:12.6996461Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Prepare reports	2026-10-19T03:47:12.6996879Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Prepare reports	2026-10-19T03:47:12.6997562Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Prepare reports	2026-10-19T03:47:12.6997990Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sca	Prepare reports	2026-10-19T03:47:12.6998344Z ##[endgroup]
+sca	pip-audit SCA (runtime dependencies)	﻿2026-10-19T03:47:12.7151279Z ##[group]Run pip-audit -r requirements.txt --require-hashes -f json -o reports/pip-audit.json
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7152003Z ^[[36;1mpip-audit -r requirements.txt --require-hashes -f json -o reports/pip-audit.json^[[0m
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7219414Z shell: /usr/bin/bash -e {0}
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7219700Z env:
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7219992Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7220453Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7220901Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7221284Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7221676Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7222076Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:12.7222412Z ##[endgroup]
+sca	pip-audit SCA (runtime dependencies)	2026-10-19T03:47:19.4033988Z No known vulnerabilities found
+sca	Preserve results even if a check fails	﻿2026-10-19T03:47:19.4510473Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4510924Z with:
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4511136Z   name: sca-reports
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4511511Z   path: reports/
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4511730Z   if-no-files-found: warn
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4511968Z   retention-days: 30
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4512198Z   compression-level: 6
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4512414Z   overwrite: false
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4512630Z   include-hidden-files: false
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4512870Z   archive: true
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4513076Z env:
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4513337Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4513787Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4514226Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4514624Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4515013Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4515437Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.4515764Z ##[endgroup]
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.5919765Z With the provided path, there will be 1 file uploaded
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.5926870Z Artifact name is valid!
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.5928071Z Root directory input is valid!
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.9858515Z Uploading artifact: sca-reports.zip
+sca	Preserve results even if a check fails	2026-10-19T03:47:19.9916936Z Beginning upload of artifact content to blob storage
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.2827163Z Uploaded bytes 325
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.3517102Z Finished uploading artifact content to blob storage!
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.3518913Z SHA256 digest of uploaded artifact is 6d624e7f5999f08f1ecf9226b81350d75e7a2092287b061480f3279a8ce6c7c7
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.3520385Z Finalizing artifact upload
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.7375069Z Artifact sca-reports successfully finalized. Artifact ID 12161579477
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.7376884Z Artifact sca-reports has been successfully uploaded! Final size is 325 bytes. Artifact ID is 12161579477
+sca	Preserve results even if a check fails	2026-10-19T03:47:20.7384037Z Artifact download URL: https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39196313211/artifacts/12161579477
+sca	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-19T03:47:20.7546374Z Post job cleanup.
+sca	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-19T03:47:20.8686790Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-704696994535aa6d8c3666e2d96be2bea8763e05829f47e2114df58ac3c9545f, not saving cache.
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T03:47:20.8820430Z Post job cleanup.
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9704509Z [command]/usr/bin/git version
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9759750Z git version 2.55.0
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9819623Z Temporarily overriding HOME='/home/runner/work/_temp/01b82bf8-7828-4bd4-8050-5833f498b79e' before making global git config changes
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9831916Z Adding repository directory to the temporary git global config as a safe directory
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9833510Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9869299Z Removing SSH command configuration
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9883311Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:20.9925343Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0263538Z Removing HTTP extra header
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0264653Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0310186Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0669355Z Removing includeIf entries pointing to credentials config files
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0670730Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0718614Z includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0720401Z includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0721967Z includeif.gitdir:/github/workspace/.git.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0722792Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0725190Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0760687Z /home/runner/work/_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0777869Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-ce553543\-bf31\-4f31\-b6fd\-a2830c324eae\.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0850610Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0889963Z /home/runner/work/_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0906465Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/hdu-is-work1-secure-api/hdu-is-work1-secure-api/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-ce553543\-bf31\-4f31\-b6fd\-a2830c324eae\.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.0970946Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1009450Z /github/runner_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1020204Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-ce553543\-bf31\-4f31\-b6fd\-a2830c324eae\.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1069899Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1099069Z /github/runner_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1111445Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-ce553543\-bf31\-4f31\-b6fd\-a2830c324eae\.config
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1169578Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+sca	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T03:47:21.1405799Z Removing credentials config '/home/runner/work/_temp/git-credentials-ce553543-bf31-4f31-b6fd-a2830c324eae.config'
+sca	Complete job	﻿2026-10-19T03:47:21.1551195Z Cleaning up orphan processes

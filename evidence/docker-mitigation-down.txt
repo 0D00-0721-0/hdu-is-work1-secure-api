@@ -1,0 +1,6 @@
+ Container work1-mitigation-apache-1 Stopping 
+ Container work1-mitigation-apache-1 Stopped 
+ Container work1-mitigation-apache-1 Removing 
+ Container work1-mitigation-apache-1 Removed 
+ Network work1-mitigation_default Removing 
+ Network work1-mitigation_default Removed 

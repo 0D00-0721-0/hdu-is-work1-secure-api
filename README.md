@@ -156,7 +156,9 @@ docker compose -p work1-fixed -f fixes/compose.yml down
 
 修复后的验证脚本重发完全相同的原始攻击 URL，要求返回 400/403/404 且正文不含容器账户文件内容；同时首页必须返回 200 和 `It works!`。这是综合版本与配置修复的验证，不把结果单独归因于其中一个改动。修复细节和 diff 见 `fixes/README.md`、`fixes/httpd.patch`。
 
-首次镜像下载因当前网络 DNS/IPv6 不通失败，后续网络恢复后成功。失败日志与最终成功日志分别记录，未用上游示例图片替代本机证据。临时 Wi-Fi DNS 已恢复自动获取，Docker 代理设置未改动。
+另外完成了独立的配置缓解对照：`fixes/compose.mitigation.yml` 使用同一 2.4.49 基础镜像、保留 autoindex Alias，但保持文件系统根目录默认拒绝且不开 CGI。它在 18081 端口实际把相同攻击从 200 阻断为 403，同时首页仍为 200；这不代表旧版二进制缺陷已被移除。运行方法为 `BASE_URL=http://127.0.0.1:18081 bash scripts/verify_cve.sh fixed evidence/cve-mitigation`。最终升级验证状态见验证记录。
+
+首次镜像下载因当前网络 DNS/IPv6 不通失败，后续网络恢复后成功。临时 Wi-Fi DNS 已恢复自动获取，Docker 代理设置未改动。没有使用上游示例图片替代本机证据；日志页面截图明确标注其来源。
 
 ## 8. Git 初始化与提交
 

@@ -8,6 +8,8 @@
 | `compose.yml` | 本地回环端口 18080、amd64 兼容、资源限制和 no-new-privileges |
 | `httpd.patch` | 脆弱 Dockerfile 到修复 Dockerfile 的统一差异 |
 | `../scripts/verify_cve.sh` | 修复前后使用相同请求进行自动验证 |
+| `Dockerfile.mitigation` | 在缓存的 2.4.49 基础镜像上恢复默认根目录拒绝，保持 autoindex Alias，不开启 CGI |
+| `compose.mitigation.yml` | 独立配置缓解对照环境，回环端口 18081 |
 
 Vulhub 为方便演示启用 CGI、自动索引 Alias，并把 `<Directory />` 设为 `Require all granted`。修复删除这些有意放宽的设置，恢复官方镜像对文件系统根目录默认拒绝，仅开放正常网页目录。升级补上路径规范化缺陷；权限最小化进一步限制意外的目录映射。
 
@@ -22,3 +24,5 @@ docker compose -p work1-fixed -f fixes/compose.yml down
 ```
 
 保留的证据包括构建日志、`httpd -v` 输出、同一攻击的原始响应头/正文/状态码、正常首页响应。见 `evidence/VERIFICATION.md`。
+
+配置缓解已实际验证：`BASE_URL=http://127.0.0.1:18081 bash scripts/verify_cve.sh fixed evidence/cve-mitigation`，原攻击从 200 变为 403，正常首页仍为 200。配置缓解不等于从旧版本二进制移除了缺陷，仍应升级。

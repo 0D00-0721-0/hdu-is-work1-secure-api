@@ -5,7 +5,8 @@ phase="${1:?Usage: verify_cve.sh vulnerable|fixed [output-directory]}"
 [[ "$phase" == vulnerable || "$phase" == fixed ]] || exit 2
 out="${2:-evidence/cve-$phase}"
 mkdir -p "$out"
-base=http://127.0.0.1:18080
+base="${BASE_URL:-http://127.0.0.1:18080}"
+[[ "$base" =~ ^http://127\.0\.0\.1:[0-9]+$ ]] || { echo 'Only loopback lab URLs are allowed'; exit 2; }
 curl_args=(--noproxy '*' --silent --show-error --max-time 10 --path-as-is)
 probe() {
   local name="$1" path="$2"

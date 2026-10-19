@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><style>
+body{font:17px/1.55 'PingFang SC','Arial Unicode MS',sans-serif;color:#182b3a;background:#f2f5f7;margin:0;padding:30px}
+main{max-width:1240px;margin:auto}h1{font-size:30px;margin:0 0 8px}h2{font-size:20px;margin:0 0 10px}
+.note{background:#e5eef5;border-left:5px solid #27628a;padding:12px 18px;margin:15px 0 24px}
+section{background:white;border:1px solid #d5dfe6;border-radius:8px;margin:16px 0;padding:22px}
+.source{font-size:12px;color:#526779;word-break:break-all}pre{font:14px/1.5 Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f6f8fa;padding:15px;border-radius:4px}
+</style><main><h1>Work 1 | CVE-2021-41773 修复对照</h1><div class="note">本页是本次真实原始日志的浏览器呈现。不是终端截图，也不是 GitHub Actions 原生界面。完整原始文件随项目提交，可按 SHA-256 核对。</div><section><h2>脆弱环境：版本</h2><p class="source">来源：evidence/cve-vulnerable-version.txt<br>SHA-256: 055eb56c0351a47d18e18254a3dcba954a9983009dd2c5c1bd6488521be7c1f8</p><pre>Server version: Apache/2.4.49 (Unix)
+Server built:   Sep 28 2021 07:46:54
+</pre></section><section><h2>脆弱环境：同一攻击路径与首页回归</h2><p class="source">来源：evidence/cve-vulnerable-summary.txt<br>SHA-256: d0ea3d346be4a6288eeca34f936d9246a945c0c1a541f97ae5621c437562687e</p><pre>homepage     HTTP 200
+traversal    HTTP 200
+PASS: vulnerable container disclosed its /etc/passwd.
+</pre></section><section><h2>脆弱环境：攻击响应</h2><p class="source">来源：evidence/cve-vulnerable/traversal.headers<br>SHA-256: b143508b572af1aeb53370b8f8e1b2b4199a3070841c629d0479f7222f172e2f</p><pre>HTTP/1.1 200 OK
+Date: Mon, 19 Oct 2026 03:38:27 GMT
+Server: Apache/2.4.49 (Unix)
+Last-Modified: Mon, 27 Sep 2021 00:00:00 GMT
+ETag: &quot;39e-5cceec7356000&quot;
+Accept-Ranges: bytes
+Content-Length: 926
+
+</pre></section><section><h2>脆弱环境：响应正文（前 8 行）</h2><p class="source">来源：evidence/cve-vulnerable/traversal.body<br>SHA-256: 5baf19ce6561538119dfe32d561d6ab8509703606f768fea72723a01ee4264b7</p><pre>root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin</pre></section><section><h2>配置缓解：版本</h2><p class="source">来源：evidence/cve-mitigation-version.txt<br>SHA-256: 055eb56c0351a47d18e18254a3dcba954a9983009dd2c5c1bd6488521be7c1f8</p><pre>Server version: Apache/2.4.49 (Unix)
+Server built:   Sep 28 2021 07:46:54
+</pre></section><section><h2>配置缓解：同一攻击路径与首页回归</h2><p class="source">来源：evidence/cve-mitigation-summary.txt<br>SHA-256: b9b86a6dde5f44852f5405b851a4250546a44ff175a7091933c7daf94e8a3519</p><pre>homepage     HTTP 200
+traversal    HTTP 403
+PASS: the original traversal request is blocked; homepage still works.
+</pre></section><section><h2>配置缓解：攻击响应</h2><p class="source">来源：evidence/cve-mitigation/traversal.headers<br>SHA-256: efe5cfa8d9d07fff877bec5ba85a814b45a020a2365360c4d86115a36d8696b0</p><pre>HTTP/1.1 403 Forbidden
+Date: Mon, 19 Oct 2026 03:42:47 GMT
+Server: Apache/2.4.49 (Unix)
+Content-Length: 199
+Content-Type: text/html; charset=iso-8859-1
+
+</pre></section><section><h2>配置缓解：响应正文（前 8 行）</h2><p class="source">来源：evidence/cve-mitigation/traversal.body<br>SHA-256: 5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10</p><pre>&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;403 Forbidden&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Forbidden&lt;/h1&gt;
+&lt;p&gt;You don&#x27;t have permission to access this resource.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</pre></section></main></html>

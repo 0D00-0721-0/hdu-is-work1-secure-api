@@ -1,0 +1,6 @@
+# Interim configuration mitigation on the cached Vulhub 2.4.49 base.
+# The vulnerable parser remains: deploy the upgraded main Dockerfile when available.
+FROM vulhub/httpd:2.4.49
+RUN sed -i 's|#Include conf/extra/httpd-autoindex.conf|Include conf/extra/httpd-autoindex.conf|g' /usr/local/apache2/conf/httpd.conf \
+    && httpd -t
+# Keep default Require all denied for /; do not enable CGI modules.

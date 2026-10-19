@@ -1,0 +1,45 @@
+ Image work1-mitigation-apache Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 771B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile.mitigation
+#2 transferring dockerfile: 448B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/vulhub/httpd:2.4.49
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/2] FROM docker.io/vulhub/httpd:2.4.49@sha256:a6c32432b1ed40818488e238769e962a4151ef3b74b54416d9d5d396ba8cab5f
+#5 resolve docker.io/vulhub/httpd:2.4.49@sha256:a6c32432b1ed40818488e238769e962a4151ef3b74b54416d9d5d396ba8cab5f done
+#5 CACHED
+
+#6 [2/2] RUN sed -i 's|#Include conf/extra/httpd-autoindex.conf|Include conf/extra/httpd-autoindex.conf|g' /usr/local/apache2/conf/httpd.conf     && httpd -t
+#6 0.132 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message
+#6 0.133 Syntax OK
+#6 DONE 0.2s
+
+#7 exporting to image
+#7 exporting layers 0.0s done
+#7 exporting manifest sha256:b115f96e1987b00c662be1f0459146c7e9f7a9c6f6f9589f441a802d671a7f75 done
+#7 exporting config sha256:a042a0e3fffff867ef77f6b4eaee3b0bd36408d9744bff828b78bccfbead09bd done
+#7 exporting attestation manifest sha256:3832fefccc4d7812611bca0491ac1c162dff9f531a9fdd8f1c37c970de062492 done
+#7 exporting manifest list sha256:ccb39dbfe7ddbaaa6035bc6cbf0f3507aef7c608fd96849a46b4b04a26c57669 done
+#7 naming to docker.io/library/work1-mitigation-apache:latest done
+#7 DONE 0.0s
+
+#8 resolving provenance for metadata file
+#8 DONE 0.0s
+ Image work1-mitigation-apache Built 
+ Network work1-mitigation_default Creating 
+ Network work1-mitigation_default Creating 
+ Network work1-mitigation_default Created 
+ Network work1-mitigation_default Created 
+ Container work1-mitigation-apache-1 Creating 
+ Container work1-mitigation-apache-1 Created 
+ Container work1-mitigation-apache-1 Starting 
+ Container work1-mitigation-apache-1 Started 
