@@ -4,7 +4,7 @@ main{max-width:1240px;margin:auto}h1{font-size:30px;margin:0 0 8px}h2{font-size:
 .note{background:#e5eef5;border-left:5px solid #27628a;padding:12px 18px;margin:15px 0 24px}
 section{background:white;border:1px solid #d5dfe6;border-radius:8px;margin:16px 0;padding:22px}
 .source{font-size:12px;color:#526779;word-break:break-all}pre{font:14px/1.5 Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f6f8fa;padding:15px;border-radius:4px}
-</style><main><h1>Work 1 | CVE-2021-41773: Before and After Mitigation</h1><div class="note">Browser presentation of the original recorded logs. This is not a native terminal capture or a native GitHub Actions report page. Original files are included and can be checked against the SHA-256 values. English captions do not imply a new experiment.</div><section><h2>Vulnerable environment: version</h2><p class="source">Source: evidence/cve-vulnerable-version.txt<br>SHA-256: 055eb56c0351a47d18e18254a3dcba954a9983009dd2c5c1bd6488521be7c1f8</p><pre>Server version: Apache/2.4.49 (Unix)
+</style><main><h1>Work 1 | CVE-2021-41773: Mitigation and Upgrade Evidence</h1><div class="note">Browser presentation of the original recorded logs. This is not a native terminal capture or a native GitHub Actions report page. Original files are included and can be checked against the SHA-256 values. English captions do not imply a new experiment.</div><section><h2>Vulnerable environment: version</h2><p class="source">Source: evidence/cve-vulnerable-version.txt<br>SHA-256: 055eb56c0351a47d18e18254a3dcba954a9983009dd2c5c1bd6488521be7c1f8</p><pre>Server version: Apache/2.4.49 (Unix)
 Server built:   Sep 28 2021 07:46:54
 </pre></section><section><h2>Vulnerable environment: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-vulnerable-summary.txt<br>SHA-256: d0ea3d346be4a6288eeca34f936d9246a945c0c1a541f97ae5621c437562687e</p><pre>homepage     HTTP 200
 traversal    HTTP 200
@@ -41,4 +41,43 @@ Content-Type: text/html; charset=iso-8859-1
 &lt;/head&gt;&lt;body&gt;
 &lt;h1&gt;Forbidden&lt;/h1&gt;
 &lt;p&gt;You don&#x27;t have permission to access this resource.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</pre></section><section><h2>Upgraded environment: version</h2><p class="source">Source: evidence/cve-fixed-version.txt<br>SHA-256: bdcafa92c9a1a890984d3022debe68d4b3bf9d7b98f1c0e85f656951d8a6c37d</p><pre>Server version: Apache/2.4.69 (Unix)
+Server built:   Oct  6 2026 01:17:53
+</pre></section><section><h2>Upgraded environment: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-fixed-summary.txt<br>SHA-256: 8da6315c5f14c60e0e225a6245145e8c818a983a175ebbb757cc43ff737d3ffe</p><pre>homepage     HTTP 200
+traversal    HTTP 400
+PASS: the original traversal request is blocked; homepage still works.
+</pre></section><section><h2>Upgraded environment: attack response headers</h2><p class="source">Source: evidence/cve-fixed/traversal.headers<br>SHA-256: 5a9cdce3b2132f2ddc0ef57fcc620b3dc2cc1ea6be70a37befe96f098a798326</p><pre>HTTP/1.1 400 Bad Request
+Date: Mon, 19 Oct 2026 06:01:30 GMT
+Server: Apache/2.4.69 (Unix)
+Content-Length: 266
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+</pre></section><section><h2>Upgraded environment: response body (first 8 lines)</h2><p class="source">Source: evidence/cve-fixed/traversal.body<br>SHA-256: d452c21413341d93aa8d178d637d88c93362dd817e06f6afc2f036a78d88d08b</p><pre>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;400 Bad Request&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Bad Request&lt;/h1&gt;
+&lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
+&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</pre></section><section><h2>Permissive-config cross-check: version</h2><p class="source">Source: evidence/cve-fixed-permissive-version.txt<br>SHA-256: bdcafa92c9a1a890984d3022debe68d4b3bf9d7b98f1c0e85f656951d8a6c37d</p><pre>Server version: Apache/2.4.69 (Unix)
+Server built:   Oct  6 2026 01:17:53
+</pre></section><section><h2>Permissive-config cross-check: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-fixed-permissive-summary.txt<br>SHA-256: 311b97f1d3626f3d48e469aa970052abca78b89e9b0d85f01026021d1106a40b</p><pre>homepage     HTTP 200
+traversal    HTTP 400
+PASS: the original traversal request is blocked; homepage still works.
+icons        HTTP 200
+</pre></section><section><h2>Permissive-config cross-check: attack response headers</h2><p class="source">Source: evidence/cve-fixed-permissive/traversal.headers<br>SHA-256: 808757193a94db39e87053fc7e1b89f15e9ebf4b7fb418e312f86dc3cf2eb098</p><pre>HTTP/1.1 400 Bad Request
+Date: Mon, 19 Oct 2026 06:01:36 GMT
+Server: Apache/2.4.69 (Unix)
+Content-Length: 266
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+</pre></section><section><h2>Permissive-config cross-check: response body (first 8 lines)</h2><p class="source">Source: evidence/cve-fixed-permissive/traversal.body<br>SHA-256: d452c21413341d93aa8d178d637d88c93362dd817e06f6afc2f036a78d88d08b</p><pre>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;400 Bad Request&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Bad Request&lt;/h1&gt;
+&lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
+&lt;/p&gt;
 &lt;/body&gt;&lt;/html&gt;</pre></section></main></html>

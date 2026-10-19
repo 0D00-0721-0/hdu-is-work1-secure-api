@@ -2,7 +2,7 @@
 
 This project implements Work 1 of *Labs Full Manual HDU IS* (pages 1-5): a secure Python 3.12 + Flask + SQLite API, automated security checks, and an isolated Docker reproduction of Apache HTTP Server CVE-2021-41773.
 
-**Verified outcome:** all 29 API tests and the live curl checks passed. GitHub Actions successfully ran tests, Bandit SAST, and pip-audit SCA. The vulnerable container disclosed its own `/etc/passwd`; the configuration mitigation blocked the same attack with HTTP 403 while the homepage remained available with HTTP 200. The separate version-upgrade proposal has **not** been dynamically verified because some image-layer downloads stalled.
+**Verified outcome:** all 29 API tests and the live curl checks passed. GitHub Actions successfully ran tests, Bandit SAST, and pip-audit SCA. The vulnerable container disclosed its own `/etc/passwd`; the configuration mitigation blocked the same attack with HTTP 403 while the homepage remained available with HTTP 200. The version upgrade to Apache 2.4.69 also blocked the same request with HTTP 400 while the homepage stayed available, including a cross-check under the original permissive Vulhub settings.
 
 ## 1. Deliverables and evidence
 
@@ -13,7 +13,7 @@ This project implements Work 1 of *Labs Full Manual HDU IS* (pages 1-5): a secur
 - `tests/test_api.py`: 29 authentication, input-validation, SQLi, XSS, authorization, and regression tests.
 - `scripts/curl_tests.sh`: live HTTP checks using curl.
 - `lab/vulnerable/`: upstream Vulhub Dockerfile and reproduction documentation.
-- `fixes/`: verified configuration mitigation, an upgrade proposal, Compose files, and a patch.
+- `fixes/`: verified configuration mitigation, verified upgrade, a validation-only permissive-config check, Compose files, and a patch.
 - `evidence/`: actual execution logs, HTTP responses, and scanner reports.
 - `screenshots/` and `docs/SCREENSHOTS.md`: screenshots and their evidence mapping.
 - `docs/Work1_Report.md` and `docs/Work1_Report.pdf`: English report in the local submission package. Personal cover-page details are excluded from the public repository.
@@ -146,7 +146,7 @@ curl --noproxy '*' --path-as-is -i \
 
 `--path-as-is` prevents client-side path normalization. The container returned HTTP 200 and disclosed its own `/etc/passwd`; no host file was read. This verifies file disclosure, not RCE. Raw headers, status codes, and bodies are in `evidence/cve-vulnerable/`.
 
-## 7. Root cause, verified mitigation, and upgrade proposal
+## 7. Root cause, verified mitigation, and verified upgrade
 
 Apache 2.4.49 incompletely normalized encoded parent-directory segments. Alias mapping through `/icons/` could lead outside the intended directory. Vulhub also changes root-directory access from `Require all denied` to `Require all granted`, allowing the escaped file to be read. CGI may permit command execution under additional conditions; this branch was not tested.
 
@@ -164,18 +164,19 @@ docker compose -p work1-mitigation -f fixes/compose.mitigation.yml down
 
 The **same attack path returned HTTP 403**, contained no account-file content, and the homepage returned HTTP 200 with `It works!`. Evidence is in `evidence/cve-mitigation/`. The control blocks this attack but does not remove the parser defect from the old binary; later permission changes could re-expose it.
 
-### Version-upgrade proposal: not dynamically verified
+### Verified version upgrade
 
-The initial 2.4.50 fix was incomplete; the related bypass, CVE-2021-42013, was fixed in 2.4.51. The upgrade proposal in `fixes/Dockerfile` targets the inspected official 2.4.69 image and its default denial, CGI, and Alias settings.
+The initial 2.4.50 fix was incomplete; the related bypass, CVE-2021-42013, was fixed in 2.4.51. The upgrade in `fixes/Dockerfile` uses the inspected official 2.4.69 image with its default denial, CGI, and Alias settings.
 
 ```bash
 docker compose -p work1-fixed -f fixes/compose.yml up --build -d
 docker compose -p work1-fixed -f fixes/compose.yml exec -T apache httpd -v
-bash scripts/verify_cve.sh fixed
+BASE_URL=http://127.0.0.1:18080 \
+  bash scripts/verify_cve.sh fixed evidence/cve-fixed
 docker compose -p work1-fixed -f fixes/compose.yml down
 ```
 
-The 2.4.69 image and its Alpine variant were attempted, but some layer downloads stalled. **No successful upgraded container or upgrade-regression result is claimed.** The commands above are the follow-up procedure. The script requires the attack to return 400/403/404 without account-file content and the homepage to return 200.
+The container reported Apache/2.4.69. The homepage returned HTTP 200, the same traversal returned HTTP 400, and the body contained no account-file content. A second check kept the original permissive Vulhub settings on 2.4.69: `/icons/` returned 200 (Alias active), the traversal returned 400, and the homepage returned 200. That separates the parser fix from the configuration change. Evidence is in `evidence/cve-fixed/` and `evidence/cve-fixed-permissive/`; the validation-only files are `fixes/Dockerfile.upgrade-check` and `fixes/compose.upgrade-check.yml`.
 
 Initial vulnerable-image downloads also encountered a DNS/IPv6 routing failure. A later attempt succeeded following a temporary DNS change and a user network switch; those overlapping changes do not establish a single cause of recovery. Wi-Fi DNS was restored to automatic configuration, and Docker proxy settings were not changed. Evidence-viewer screenshots are labelled as browser presentations of raw logs, not native terminal captures.
 

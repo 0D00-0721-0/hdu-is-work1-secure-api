@@ -10,8 +10,9 @@ Every screenshot must correspond to the project's actual evidence. Original logs
 | S04 | pip-audit: 10 runtime dependencies, no known vulnerabilities | `evidence/pip-audit.json` | `S01-S04-api-evidence.png` |
 | S05 | Successful tests/SAST/SCA jobs and the workflow run | `docs/SUBMISSION.md`, `evidence/ci-current/` | `S05-actions-success.png`: native GitHub Actions page |
 | S06 | Apache 2.4.49 and the traversal response disclosing a container file | `evidence/cve-vulnerable-version.txt`, `evidence/cve-vulnerable/` | `S06-S07-cve-evidence.png` |
-| S07 | Configuration mitigation: attack 403 and homepage 200; binary still 2.4.49 | `evidence/cve-mitigation-version.txt`, `evidence/cve-mitigation/` | `S06-S07-cve-evidence.png`; no upgraded-version result is claimed |
+| S07 | Configuration mitigation: attack 403 and homepage 200; binary still 2.4.49 | `evidence/cve-mitigation-version.txt`, `evidence/cve-mitigation/` | `S06-S07-cve-evidence.png` |
 | S08 | Configuration/upgrade files and the upgrade diff | `fixes/httpd.patch`, `fixes/README.md` | Supplied as reviewable files |
+| S09 | Verified upgrade: Apache 2.4.69, attack 400, homepage 200; permissive-config cross-check also 400 with `/icons/` 200 | `evidence/cve-fixed-*`, `evidence/cve-fixed/`, `evidence/cve-fixed-permissive-*`, `evidence/cve-fixed-permissive/` | Rendered in `docs/evidence-cve.html` and `S06-S07-cve-evidence.png` |
 
 The S01-S04 and S06-S07 images are **browser presentations of saved raw logs**, with English headings and source hashes. They are not native terminal screenshots or native Actions report pages. Recreating those evidence pages in English does not rerun or alter the original tests. S05 is a genuine GitHub Actions page capture.
 

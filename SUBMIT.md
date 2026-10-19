@@ -12,13 +12,13 @@ Verified successful implementation/submission CI: https://github.com/0D00-0721-0
 | Automated push/PR security CI | `.github/workflows/ci.yml` |
 | Live curl checks and automated tests | `scripts/curl_tests.sh`, `tests/test_api.py` |
 | Vulnerable environment and upstream provenance | `lab/` |
-| Verified configuration mitigation and unverified upgrade proposal | `fixes/` |
+| Verified configuration mitigation and verified 2.4.69 upgrade | `fixes/` |
 | Original execution evidence and CI reports | `evidence/` |
 | Screenshots and evidence mapping | `screenshots/`, `docs/SCREENSHOTS.md` |
 
-Completed and recorded: 29 automated tests, live HTTP checks, Bandit SAST, pip-audit SCA, successful GitHub Actions runs, Docker/Vulhub file-disclosure reproduction, and configuration mitigation that returned 403 for the same attack while retaining a working homepage.
+Completed and recorded: 29 automated tests, live HTTP checks, Bandit SAST, pip-audit SCA, successful GitHub Actions runs, Docker/Vulhub file-disclosure reproduction, configuration mitigation that returned 403 for the same attack while retaining a working homepage, and a verified upgrade to Apache 2.4.69 that returned 400 for the same path with the homepage still available. A permissive-config cross-check on 2.4.69 returned the same 400 result.
 
-Limitation: some layers of the newer Apache images could not be downloaded successfully. The version-upgrade proposal has not been dynamically verified. The verified protection is `Dockerfile.mitigation` with `compose.mitigation.yml`. It still uses the 2.4.49 binary; restored permissions block this attack, but a software upgrade remains recommended.
+Both protection measures are verified: the configuration mitigation keeps the 2.4.49 binary with restored permissions, and the upgrade uses Apache 2.4.69. The mitigation still leaves the old parser in place; the upgrade removes it.
 
 The report already contains the student's name and HDU ID. Add the variant number after the instructor assigns it. Submit the English report and ZIP through the course platform with the repository and successful CI links. The report is excluded from the public repository because it contains personal cover-page details.
 
