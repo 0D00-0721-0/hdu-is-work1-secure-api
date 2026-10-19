@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+instance/
+*.sqlite3*
+.env
+.DS_Store
+third_party/
+reports/
+*.zip
+docs/Work1_Report.md
+docs/Work1_Report.pdf

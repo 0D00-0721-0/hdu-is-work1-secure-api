@@ -1,0 +1,8 @@
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[tester]	WARNING	nosec encountered (B105), but no failed test on file app/__init__.py:183
+[tester]	WARNING	nosec encountered (B105), but no failed test on file app/__init__.py:183
+[tester]	WARNING	nosec encountered (B105), but no failed test on file app/__init__.py:183
+[json]	INFO	JSON output written to file: evidence/bandit.json

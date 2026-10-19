@@ -1,0 +1,11 @@
+PASS no_token                         HTTP 401
+PASS custom_endpoint_no_token         HTTP 401
+PASS login                            HTTP 200
+PASS protected_data                   HTTP 200
+PASS wrong_password                   HTTP 401
+PASS sql_injection                    HTTP 401
+PASS forged_token                     HTTP 401
+PASS xss_payload                      HTTP 201
+PASS output_escaping {'body': '&lt;img src=x onerror=alert(1)&gt;', 'id': 2, 'title': '&lt;script&gt;alert(1)&lt;/script&gt;'}
+PASS read_after_write                 HTTP 200
+All live curl checks passed.
