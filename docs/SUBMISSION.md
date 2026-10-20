@@ -8,6 +8,6 @@ The earlier successful [run 39196313211](https://github.com/0D00-0721-0/hdu-is-w
 
 Each subsequent push or pull request triggers the same checks. View the [Actions page](https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions) for the latest run. The links above refer to verified successful historical runs, not an assumed result for an unfinished run.
 
-Local results: 29 automated tests passed and all live curl checks passed. The vulnerable traversal returned 200; configuration mitigation returned 403 for the same path, with the normal homepage returning 200 in both cases. Original evidence is in `evidence/`.
+Local results: 29 automated tests passed and all live curl checks passed. The vulnerable AJP request returned 200 and disclosed `/WEB-INF/web.xml`; the mitigation and the Tomcat 9.0.31 upgrade both refused the AJP request, with the homepage returning 200 in all cases. Original evidence is in `evidence/`.
 
-The local report includes personal cover-page details and is therefore not committed to the public repository. Updating the documentation language does not change the original execution timestamps or imply a new CVE experiment.
+The local report includes personal cover-page details and is therefore not committed to the public repository.

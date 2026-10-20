@@ -1,9 +1,0 @@
-Original Docker output. Temporary signed download query parameters have been redacted.
-2.4.49: Pulling from vulhub/httpd
-59fed288cd32: Pulling fs layer
-0827b74117da: Pulling fs layer
-05bb40c8f148: Pulling fs layer
-35a526fdcc7d: Pulling fs layer
-07aded7c29c6: Pulling fs layer
-59fed288cd32: Already exists
-failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudfront.docker.com/registry-v2/docker/registry/v2/blobs/sha256/08/0827b74117da10c400a8a41c2e650dda3f544df711daf005dce881af60877955/data?[temporary-signed-query-redacted]": dialing production.cloudfront.docker.com:443 container via direct connection because Docker Desktop has no HTTPS proxy: connecting to production.cloudfront.docker.com:443: dial tcp [2600:9000:2149:5800:9:4855:aac0:93a1]:443: connect: no route to host

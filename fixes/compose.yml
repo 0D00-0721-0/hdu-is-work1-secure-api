@@ -1,10 +1,12 @@
 services:
-  apache:
-    build: .
+  tomcat:
+    build:
+      context: .
+      dockerfile: Dockerfile
     platform: linux/amd64
     ports:
-      - "127.0.0.1:18080:80"
-    mem_limit: 256m
-    pids_limit: 100
+      - "127.0.0.1:18082:8080"
+    mem_limit: 512m
+    pids_limit: 200
     security_opt:
       - no-new-privileges:true

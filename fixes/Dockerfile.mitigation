@@ -1,6 +1,6 @@
-# Interim configuration mitigation on the cached Vulhub 2.4.49 base.
-# The vulnerable parser remains: deploy the upgraded main Dockerfile when available.
-FROM vulhub/httpd:2.4.49
-RUN sed -i 's|#Include conf/extra/httpd-autoindex.conf|Include conf/extra/httpd-autoindex.conf|g' /usr/local/apache2/conf/httpd.conf \
-    && httpd -t
-# Keep default Require all denied for /; do not enable CGI modules.
+# Interim configuration mitigation on the vulnerable 9.0.30 image.
+# The application does not need AJP, so the connector is removed.
+FROM vulhub/tomcat:9.0.30
+
+RUN sed -i 's|<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />|<!-- AJP connector disabled for CVE-2020-1938 mitigation -->|' $CATALINA_HOME/conf/server.xml \
+    && ! grep -q '<Connector port="8009"' $CATALINA_HOME/conf/server.xml

@@ -4,80 +4,34 @@ main{max-width:1240px;margin:auto}h1{font-size:30px;margin:0 0 8px}h2{font-size:
 .note{background:#e5eef5;border-left:5px solid #27628a;padding:12px 18px;margin:15px 0 24px}
 section{background:white;border:1px solid #d5dfe6;border-radius:8px;margin:16px 0;padding:22px}
 .source{font-size:12px;color:#526779;word-break:break-all}pre{font:14px/1.5 Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f6f8fa;padding:15px;border-radius:4px}
-</style><main><h1>Work 1 | CVE-2021-41773: Mitigation and Upgrade Evidence</h1><div class="note">Browser presentation of the original recorded logs. This is not a native terminal capture or a native GitHub Actions report page. Original files are included and can be checked against the SHA-256 values. English captions do not imply a new experiment.</div><section><h2>Vulnerable environment: version</h2><p class="source">Source: evidence/cve-vulnerable-version.txt<br>SHA-256: 055eb56c0351a47d18e18254a3dcba954a9983009dd2c5c1bd6488521be7c1f8</p><pre>Server version: Apache/2.4.49 (Unix)
-Server built:   Sep 28 2021 07:46:54
-</pre></section><section><h2>Vulnerable environment: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-vulnerable-summary.txt<br>SHA-256: d0ea3d346be4a6288eeca34f936d9246a945c0c1a541f97ae5621c437562687e</p><pre>homepage     HTTP 200
-traversal    HTTP 200
-PASS: vulnerable container disclosed its /etc/passwd.
-</pre></section><section><h2>Vulnerable environment: attack response headers</h2><p class="source">Source: evidence/cve-vulnerable/traversal.headers<br>SHA-256: b143508b572af1aeb53370b8f8e1b2b4199a3070841c629d0479f7222f172e2f</p><pre>HTTP/1.1 200 OK
-Date: Mon, 19 Oct 2026 03:38:27 GMT
-Server: Apache/2.4.49 (Unix)
-Last-Modified: Mon, 27 Sep 2021 00:00:00 GMT
-ETag: &quot;39e-5cceec7356000&quot;
-Accept-Ranges: bytes
-Content-Length: 926
+</style><main><h1>Work 1 | CVE-2020-1938: Ghostcat AJP File Read</h1><div class="note">Browser presentation of the original recorded logs. This is not a native terminal capture or a native GitHub Actions report page. Original files are included and can be checked against the SHA-256 values. English captions do not imply a new experiment.</div><section><h2>Vulnerable environment: version</h2><p class="source">Source: evidence/cve-vulnerable-version.txt<br>SHA-256: 581f681374faed276c38ff482e64203ffbc8c7ed2dc1cccee54fb953a0e9bdd5</p><pre>Server version: Apache Tomcat/9.0.30
+</pre></section><section><h2>Vulnerable environment: homepage and AJP regression</h2><p class="source">Source: evidence/cve-vulnerable-summary.txt<br>SHA-256: 76ceb3dc417ce17b6bd4fa02b6522f9bb924edab965aac43b65aff6c643b7ebb</p><pre>homepage     HTTP 200
+ajp          HTTP 200 (web.xml disclosed)
+PASS: vulnerable AJP connector returned /WEB-INF/web.xml.
+</pre></section><section><h2>Vulnerable environment: AJP request outcome</h2><p class="source">Source: evidence/cve-vulnerable/ajp.outcome.txt<br>SHA-256: 293555eb5761dadc4c5b411e71da70dfe983948202bd7248566080485f8c0e61</p><pre>status: 200
+</pre></section><section><h2>Vulnerable environment: AJP response body (first 12 lines)</h2><p class="source">Source: evidence/cve-vulnerable/ajp.body<br>SHA-256: 681c2d6e4023e5266032d35329276c7bc5c024507c39f4bcc4bdbc19ba9a9bfe</p><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the &quot;License&quot;); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
 
-</pre></section><section><h2>Vulnerable environment: response body (first 8 lines)</h2><p class="source">Source: evidence/cve-vulnerable/traversal.body<br>SHA-256: 5baf19ce6561538119dfe32d561d6ab8509703606f768fea72723a01ee4264b7</p><pre>root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin</pre></section><section><h2>Configuration mitigation: version</h2><p class="source">Source: evidence/cve-mitigation-version.txt<br>SHA-256: 055eb56c0351a47d18e18254a3dcba954a9983009dd2c5c1bd6488521be7c1f8</p><pre>Server version: Apache/2.4.49 (Unix)
-Server built:   Sep 28 2021 07:46:54
-</pre></section><section><h2>Configuration mitigation: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-mitigation-summary.txt<br>SHA-256: b9b86a6dde5f44852f5405b851a4250546a44ff175a7091933c7daf94e8a3519</p><pre>homepage     HTTP 200
-traversal    HTTP 403
-PASS: the original traversal request is blocked; homepage still works.
-</pre></section><section><h2>Configuration mitigation: attack response headers</h2><p class="source">Source: evidence/cve-mitigation/traversal.headers<br>SHA-256: efe5cfa8d9d07fff877bec5ba85a814b45a020a2365360c4d86115a36d8696b0</p><pre>HTTP/1.1 403 Forbidden
-Date: Mon, 19 Oct 2026 03:42:47 GMT
-Server: Apache/2.4.49 (Unix)
-Content-Length: 199
-Content-Type: text/html; charset=iso-8859-1
+      http://www.apache.org/licenses/LICENSE-2.0
 
-</pre></section><section><h2>Configuration mitigation: response body (first 8 lines)</h2><p class="source">Source: evidence/cve-mitigation/traversal.body<br>SHA-256: 5b13fb5957b84ef7bb9d0b6cd509c947ff6a37d67efdac2b896ddd3b908aad10</p><pre>&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
-&lt;html&gt;&lt;head&gt;
-&lt;title&gt;403 Forbidden&lt;/title&gt;
-&lt;/head&gt;&lt;body&gt;
-&lt;h1&gt;Forbidden&lt;/h1&gt;
-&lt;p&gt;You don&#x27;t have permission to access this resource.&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</pre></section><section><h2>Upgraded environment: version</h2><p class="source">Source: evidence/cve-fixed-version.txt<br>SHA-256: bdcafa92c9a1a890984d3022debe68d4b3bf9d7b98f1c0e85f656951d8a6c37d</p><pre>Server version: Apache/2.4.69 (Unix)
-Server built:   Oct  6 2026 01:17:53
-</pre></section><section><h2>Upgraded environment: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-fixed-summary.txt<br>SHA-256: 8da6315c5f14c60e0e225a6245145e8c818a983a175ebbb757cc43ff737d3ffe</p><pre>homepage     HTTP 200
-traversal    HTTP 400
-PASS: the original traversal request is blocked; homepage still works.
-</pre></section><section><h2>Upgraded environment: attack response headers</h2><p class="source">Source: evidence/cve-fixed/traversal.headers<br>SHA-256: 5a9cdce3b2132f2ddc0ef57fcc620b3dc2cc1ea6be70a37befe96f098a798326</p><pre>HTTP/1.1 400 Bad Request
-Date: Mon, 19 Oct 2026 06:01:30 GMT
-Server: Apache/2.4.69 (Unix)
-Content-Length: 266
-Connection: close
-Content-Type: text/html; charset=iso-8859-1
-
-</pre></section><section><h2>Upgraded environment: response body (first 8 lines)</h2><p class="source">Source: evidence/cve-fixed/traversal.body<br>SHA-256: d452c21413341d93aa8d178d637d88c93362dd817e06f6afc2f036a78d88d08b</p><pre>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;
-&lt;title&gt;400 Bad Request&lt;/title&gt;
-&lt;/head&gt;&lt;body&gt;
-&lt;h1&gt;Bad Request&lt;/h1&gt;
-&lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
-&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</pre></section><section><h2>Permissive-config cross-check: version</h2><p class="source">Source: evidence/cve-fixed-permissive-version.txt<br>SHA-256: bdcafa92c9a1a890984d3022debe68d4b3bf9d7b98f1c0e85f656951d8a6c37d</p><pre>Server version: Apache/2.4.69 (Unix)
-Server built:   Oct  6 2026 01:17:53
-</pre></section><section><h2>Permissive-config cross-check: same attack path and homepage regression</h2><p class="source">Source: evidence/cve-fixed-permissive-summary.txt<br>SHA-256: 311b97f1d3626f3d48e469aa970052abca78b89e9b0d85f01026021d1106a40b</p><pre>homepage     HTTP 200
-traversal    HTTP 400
-PASS: the original traversal request is blocked; homepage still works.
-icons        HTTP 200
-</pre></section><section><h2>Permissive-config cross-check: attack response headers</h2><p class="source">Source: evidence/cve-fixed-permissive/traversal.headers<br>SHA-256: 808757193a94db39e87053fc7e1b89f15e9ebf4b7fb418e312f86dc3cf2eb098</p><pre>HTTP/1.1 400 Bad Request
-Date: Mon, 19 Oct 2026 06:01:36 GMT
-Server: Apache/2.4.69 (Unix)
-Content-Length: 266
-Connection: close
-Content-Type: text/html; charset=iso-8859-1
-
-</pre></section><section><h2>Permissive-config cross-check: response body (first 8 lines)</h2><p class="source">Source: evidence/cve-fixed-permissive/traversal.body<br>SHA-256: d452c21413341d93aa8d178d637d88c93362dd817e06f6afc2f036a78d88d08b</p><pre>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;
-&lt;title&gt;400 Bad Request&lt;/title&gt;
-&lt;/head&gt;&lt;body&gt;
-&lt;h1&gt;Bad Request&lt;/h1&gt;
-&lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
-&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</pre></section></main></html>
+  Unless required by applicable law or agreed to in writing, software</pre></section><section><h2>Configuration mitigation: version</h2><p class="source">Source: evidence/cve-mitigation-version.txt<br>SHA-256: 581f681374faed276c38ff482e64203ffbc8c7ed2dc1cccee54fb953a0e9bdd5</p><pre>Server version: Apache Tomcat/9.0.30
+</pre></section><section><h2>Configuration mitigation: homepage and AJP regression</h2><p class="source">Source: evidence/cve-mitigation-summary.txt<br>SHA-256: 8880960410df062034c234bb8fe16783089c13dd4ec17804945f60d85c50c93e</p><pre>homepage     HTTP 200
+ajp          refused
+PASS: the AJP request is blocked; homepage still works.
+</pre></section><section><h2>Configuration mitigation: AJP request outcome</h2><p class="source">Source: evidence/cve-mitigation/ajp.outcome.txt<br>SHA-256: ecdf97af987cc4247684042da98ea3793124c046164c3c93793c8975c97c27b6</p><pre>status: refused
+stderr:
+AJP request failed: [Errno 61] Connection refused
+</pre></section><section><h2>Upgraded environment: version</h2><p class="source">Source: evidence/cve-fixed-version.txt<br>SHA-256: 2a32fd8f1ef316a034c7d72aa9ee290eec977a2cff72fe67f977a2a8710473c8</p><pre>Server version: Apache Tomcat/9.0.31
+</pre></section><section><h2>Upgraded environment: homepage and AJP regression</h2><p class="source">Source: evidence/cve-fixed-summary.txt<br>SHA-256: 8880960410df062034c234bb8fe16783089c13dd4ec17804945f60d85c50c93e</p><pre>homepage     HTTP 200
+ajp          refused
+PASS: the AJP request is blocked; homepage still works.
+</pre></section><section><h2>Upgraded environment: AJP request outcome</h2><p class="source">Source: evidence/cve-fixed/ajp.outcome.txt<br>SHA-256: ecdf97af987cc4247684042da98ea3793124c046164c3c93793c8975c97c27b6</p><pre>status: refused
+stderr:
+AJP request failed: [Errno 61] Connection refused
+</pre></section></main></html>
