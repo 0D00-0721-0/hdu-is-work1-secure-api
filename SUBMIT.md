@@ -20,6 +20,6 @@ Completed and recorded: 29 automated tests, live HTTP checks, Bandit SAST, pip-a
 
 Both protection measures are verified: the mitigation keeps the 9.0.30 binary but removes the AJP connector, and the upgrade uses Tomcat 9.0.31. A deployment that needs AJP should require a secret and restrict port 8009.
 
-The report already contains the student's name and HDU ID. Add the variant number after the instructor assigns it. Submit the English report and ZIP through the course platform with the repository and successful CI links. The report is excluded from the public repository because it contains personal cover-page details.
+The report already contains the student's name and HDU ID, and the variant number is CVE-2020-1938. Submit the English report and ZIP through the course platform with the repository and successful CI links. The report is excluded from the public repository because it contains personal cover-page details.
 
 The Chinese submission ZIP from the earlier draft is retained as a backup. Use `Work1_Submission_23320321_EN.zip` for the English submission.
