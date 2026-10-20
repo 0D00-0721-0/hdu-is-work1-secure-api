@@ -2,7 +2,7 @@
 
 Public repository: [hdu-is-work1-secure-api](https://github.com/0D00-0721-0/hdu-is-work1-secure-api).
 
-Verified successful implementation/submission run: [tests, SAST, and SCA](https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39196644394), for commit `885cdb13d27cdff25e4cbf76e0b71df9c9c412da`.
+Latest successful implementation/submission run: [tests, SAST, and SCA](https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39366086767), for commit `c3553cb7106772ef0a1c0c7130f39f936b1476a2`.
 
 The earlier successful [run 39196313211](https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39196313211) corresponds to commit `d2cf03c750b7b2d540ee3ea5dfe2b758fdcd272f`. Its downloaded reports and log are in `evidence/ci-current/`. Reports from the first successful run are retained in `evidence/ci/`.
 

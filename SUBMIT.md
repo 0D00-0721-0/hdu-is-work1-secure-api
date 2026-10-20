@@ -2,7 +2,7 @@
 
 Public repository: https://github.com/0D00-0721-0/hdu-is-work1-secure-api
 
-Verified successful implementation/submission CI: https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39196644394
+Latest successful implementation/submission CI (commit c3553cb): https://github.com/0D00-0721-0/hdu-is-work1-secure-api/actions/runs/39366086767
 
 | Submission item | Location |
 | --- | --- |

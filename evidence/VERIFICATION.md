@@ -12,7 +12,7 @@ Experiment date: 19-20 October 2026 (Asia/Shanghai).
 | Vulnerable environment | Tomcat 9.0.30; homepage 200; AJP 200; `/WEB-INF/web.xml` disclosed | `cve-vulnerable-*`, `cve-vulnerable/` |
 | Configuration mitigation | Tomcat 9.0.30 with AJP disabled; AJP refused; homepage 200 | `cve-mitigation-*`, `cve-mitigation/` |
 | Version upgrade | Tomcat 9.0.31; AJP refused; homepage 200 | `cve-fixed-*`, `cve-fixed/` |
-| GitHub Actions | tests, SAST, and SCA succeeded in run 39196313211; final implementation/submission run 39196644394 also succeeded | `ci-current/`, `docs/SUBMISSION.md` |
+| GitHub Actions | tests, SAST, and SCA succeeded in run 39196313211 (downloaded reports) and in the latest run 39366086767 (commit c3553cb) | `ci-current/`, `docs/SUBMISSION.md` |
 
 Tomcat image pulls: the first `vulhub/tomcat:9.0.30` pull timed out on one layer; a retry completed it, and the recorded runs use the completed image. The AJP probe is a read-only request for `/WEB-INF/web.xml`; it does not write or execute anything.
 
